@@ -3,6 +3,7 @@ import { CategoryGrid } from "@/components/sections/category-grid";
 import { Hero } from "@/components/sections/hero";
 import { Newsletter } from "@/components/sections/newsletter";
 import { ProductGrid } from "@/components/sections/product-grid";
+import { StatsBar } from "@/components/sections/stats-bar";
 import { ValueProps } from "@/components/sections/value-props";
 import { Button } from "@/components/ui/button";
 import { useStorefront } from "@/store/storefront";
@@ -13,6 +14,7 @@ export function HomePage() {
   return (
     <>
       <Hero />
+      <StatsBar />
       <CategoryGrid />
       <ProductGrid
         products={featuredProducts}

@@ -1,5 +1,5 @@
 import { SlidersHorizontal } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ProductFilters, type FilterState } from "@/components/store/product-filters";
 import { ProductCard } from "@/components/store/product-card";
@@ -23,6 +23,13 @@ export function ShopPage() {
     price: "all",
     sort: "featured",
   });
+
+  useEffect(() => {
+    const category = searchParams.get("category");
+    if (category) {
+      setFilters((f) => ({ ...f, category }));
+    }
+  }, [searchParams]);
 
   const categories = [...new Set(products.map((product) => product.category))];
 

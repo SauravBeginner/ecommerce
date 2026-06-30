@@ -1,6 +1,6 @@
-import { CheckCircle2 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/sections/header";
 import { useStorefront } from "@/store/storefront";
 
@@ -21,6 +21,14 @@ export function AppLayout() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Announcement bar — scrolls away, not sticky */}
+      <div className="bg-primary px-4 py-2 text-center text-xs font-medium text-primary-foreground">
+        Free shipping on all orders above $120 · Use code{" "}
+        <span className="font-bold tracking-wide">NORTHSTAR10</span> for 10% off{" "}
+        <Link to="/shop" className="ml-1 font-bold underline underline-offset-2 hover:opacity-80">
+          Shop now →
+        </Link>
+      </div>
       <Header
         cartCount={cartCount}
         wishlistCount={wishlistIds.length}
@@ -30,19 +38,7 @@ export function AppLayout() {
       <main>
         <Outlet />
       </main>
-      <footer className="border-t border-border/60 py-6">
-        <div className="container flex flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>Northstar Commerce</p>
-          {message ? (
-            <p className="flex items-center gap-2 text-foreground">
-              <CheckCircle2 className="h-4 w-4 text-primary" />
-              {message}
-            </p>
-          ) : (
-            <p>Premium essentials for everyday routines.</p>
-          )}
-        </div>
-      </footer>
+      <Footer message={message} />
     </div>
   );
 }

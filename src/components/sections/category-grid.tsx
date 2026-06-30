@@ -6,25 +6,33 @@ const categories = [
   {
     name: "Wearables",
     icon: Watch,
-    accent: "bg-emerald-100 text-emerald-950 dark:bg-emerald-400/15 dark:text-emerald-200",
+    accent: "bg-emerald-100 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-300",
+    border: "border-l-4 border-l-emerald-400",
+    gradient: "from-emerald-50/70 to-transparent dark:from-emerald-500/5",
     query: "Wearables",
   },
   {
     name: "Apparel",
     icon: Shirt,
-    accent: "bg-sky-100 text-sky-950 dark:bg-sky-400/15 dark:text-sky-200",
+    accent: "bg-sky-100 text-sky-700 dark:bg-sky-400/15 dark:text-sky-300",
+    border: "border-l-4 border-l-sky-400",
+    gradient: "from-sky-50/70 to-transparent dark:from-sky-500/5",
     query: "Apparel",
   },
   {
     name: "Desk Setup",
     icon: LampDesk,
-    accent: "bg-amber-100 text-amber-950 dark:bg-amber-400/15 dark:text-amber-200",
+    accent: "bg-amber-100 text-amber-700 dark:bg-amber-400/15 dark:text-amber-300",
+    border: "border-l-4 border-l-amber-400",
+    gradient: "from-amber-50/70 to-transparent dark:from-amber-500/5",
     query: "Desk Setup",
   },
   {
     name: "Audio",
     icon: Headphones,
-    accent: "bg-rose-100 text-rose-950 dark:bg-rose-400/15 dark:text-rose-200",
+    accent: "bg-rose-100 text-rose-700 dark:bg-rose-400/15 dark:text-rose-300",
+    border: "border-l-4 border-l-rose-400",
+    gradient: "from-rose-50/70 to-transparent dark:from-rose-500/5",
     query: "Audio",
   },
 ];
@@ -48,14 +56,14 @@ export function CategoryGrid() {
             const Icon = category.icon;
             return (
               <Link key={category.name} to={`/shop?category=${encodeURIComponent(category.query)}`}>
-                <Card className="overflow-hidden transition duration-200 hover:-translate-y-1 hover:border-primary/40">
-                  <CardContent className="flex items-center justify-between p-6">
+                <Card className={`overflow-hidden transition duration-200 hover:-translate-y-1 hover:shadow-md ${category.border}`}>
+                  <CardContent className={`flex items-center justify-between bg-gradient-to-r p-6 ${category.gradient}`}>
                     <div>
                       <p className="text-lg font-bold">{category.name}</p>
                       <p className="mt-1 text-sm text-muted-foreground">Fresh arrivals weekly</p>
                     </div>
                     <div
-                      className={`flex h-14 w-14 items-center justify-center rounded-lg ${category.accent}`}
+                      className={`flex h-14 w-14 items-center justify-center rounded-xl ${category.accent}`}
                     >
                       <Icon className="h-6 w-6" />
                     </div>

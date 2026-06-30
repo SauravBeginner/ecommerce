@@ -5,20 +5,22 @@ type ProductGridProps = {
   products: Product[];
   title?: string;
   description?: string;
+  eyebrow?: string;
 };
 
 export function ProductGrid({
   products,
   title = "Best sellers for modern routines",
   description = "A refined edit of practical, premium pieces for everyday routines.",
+  eyebrow = "Featured Products",
 }: ProductGridProps) {
   return (
-    <section id="shop" className="py-12 sm:py-16">
+    <section className="py-12 sm:py-16">
       <div className="container">
         <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-              Featured Products
+              {eyebrow}
             </p>
             <h2 className="mt-2 text-3xl font-extrabold">{title}</h2>
           </div>

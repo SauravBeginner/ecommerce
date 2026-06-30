@@ -1,16 +1,27 @@
 import { Check, Heart, ShieldCheck, Star, Truck } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { EmptyState } from "@/components/store/empty-state";
 import { ProductGrid } from "@/components/sections/product-grid";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { useStorefront } from "@/store/storefront";
 
 export function ProductDetailsPage() {
   const { slug } = useParams();
   const { products, addToCart, toggleWishlist, isWishlisted } = useStorefront();
   const product = products.find((item) => item.slug === slug);
+  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
+
+  useEffect(() => {
+    if (product) {
+      setSelectedColor(product.colors[0] ?? "");
+      setSelectedSize(product.sizes[0] ?? "");
+    }
+  }, [product?.id]);
 
   if (!product) {
     return (
@@ -34,11 +45,15 @@ export function ProductDetailsPage() {
     .filter((item) => item.category === product.category && item.id !== product.id)
     .slice(0, 4);
 
+  const discount = product.originalPrice
+    ? Math.round((1 - product.price / product.originalPrice) * 100)
+    : null;
+
   return (
     <>
       <section className="py-12 sm:py-16">
         <div className="container grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden self-start">
             <CardContent className="p-0">
               <img
                 src={product.image}
@@ -48,10 +63,13 @@ export function ProductDetailsPage() {
             </CardContent>
           </Card>
           <div className="space-y-6">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2">
               {product.badge ? <Badge>{product.badge}</Badge> : null}
               <Badge variant="outline">{product.category}</Badge>
-              <div className="flex items-center gap-2 text-sm text-amber-500">
+              {discount ? (
+                <Badge className="bg-rose-500 text-white hover:bg-rose-500">-{discount}% off</Badge>
+              ) : null}
+              <div className="flex items-center gap-1.5 text-sm text-amber-500">
                 <Star className="h-4 w-4 fill-current" />
                 <span className="font-semibold text-foreground">{product.rating}</span>
                 <span className="text-muted-foreground">({product.reviews} reviews)</span>
@@ -65,7 +83,7 @@ export function ProductDetailsPage() {
                 {product.longDescription}
               </p>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-baseline gap-3">
               <span className="text-4xl font-extrabold">${product.price.toFixed(2)}</span>
               {product.originalPrice ? (
                 <span className="text-lg text-muted-foreground line-through">
@@ -77,16 +95,22 @@ export function ProductDetailsPage() {
               <p className="text-sm font-semibold">Available colors</p>
               <div className="flex flex-wrap gap-2">
                 {product.colors.map((color) => (
-                  <span
+                  <button
                     key={color}
-                    className="inline-flex items-center gap-2 rounded-md border border-border/80 bg-card px-3 py-2 text-sm font-medium"
+                    onClick={() => setSelectedColor(color)}
+                    className={cn(
+                      "inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm font-medium transition-all duration-150",
+                      selectedColor === color
+                        ? "border-primary bg-primary/10 text-primary ring-1 ring-primary"
+                        : "border-border/80 bg-card text-foreground hover:border-primary/50 hover:bg-muted/40"
+                    )}
                   >
                     <span
-                      className="h-4 w-4 rounded-sm border border-black/10"
+                      className="h-4 w-4 shrink-0 rounded-sm border border-black/10"
                       style={{ backgroundColor: colorToSwatch(color) }}
                     />
                     {color}
-                  </span>
+                  </button>
                 ))}
               </div>
             </div>
@@ -94,12 +118,18 @@ export function ProductDetailsPage() {
               <p className="text-sm font-semibold">Sizes</p>
               <div className="flex flex-wrap gap-2">
                 {product.sizes.map((size) => (
-                  <span
+                  <button
                     key={size}
-                    className="rounded-md border border-border/80 bg-card px-3 py-2 text-sm font-medium"
+                    onClick={() => setSelectedSize(size)}
+                    className={cn(
+                      "rounded-md border px-4 py-2 text-sm font-medium transition-all duration-150",
+                      selectedSize === size
+                        ? "border-primary bg-primary text-primary-foreground"
+                        : "border-border/80 bg-card text-foreground hover:border-primary/50 hover:bg-muted/40"
+                    )}
                   >
                     {size}
-                  </span>
+                  </button>
                 ))}
               </div>
             </div>
@@ -153,6 +183,7 @@ export function ProductDetailsPage() {
           products={relatedProducts}
           title="You may also like"
           description="Related products from the same collection keep the detail page feeling like a real storefront."
+          eyebrow="Related Products"
         />
       ) : null}
     </>

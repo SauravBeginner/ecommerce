@@ -10,9 +10,9 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, description, actions }: PageHeroProps) {
   return (
-    <section className="bg-muted/25 py-12 sm:py-16">
+    <section className="bg-muted/25 py-5 sm:py-6">
       <div className="container">
-        <div className="border-b border-border/80 pb-8">
+        <div className="border-b border-border/80 pb-5">
           <Badge>{eyebrow}</Badge>
           <div className="mt-5 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
