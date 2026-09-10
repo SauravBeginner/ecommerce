@@ -2,6 +2,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { AppLayout } from "@/components/layout/app-layout";
 import { AccountLayout, AddressesPage, OrdersPage, ProfilePage } from "@/pages/account-page";
 import { CartPage } from "@/pages/cart-page";
+import { CheckoutPage } from "@/pages/checkout-page";
+import { OrderPage } from "@/pages/order-page";
 import { LoginPage } from "@/pages/login-page";
 import { HomePage } from "@/pages/home-page";
 import { ProductDetailsPage } from "@/pages/product-details-page";
@@ -18,6 +20,8 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/order/:id" element={<OrderPage />} />
         <Route path="/account" element={<AccountLayout />}>
           <Route index element={<ProfilePage />} />
           <Route path="addresses" element={<AddressesPage />} />

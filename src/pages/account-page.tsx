@@ -1,5 +1,5 @@
 import { type FormEvent, useEffect, useState } from "react";
-import { Check, Heart, LogOut, MapPin, Package, Pencil, Plus, Trash2, UserRound } from "lucide-react";
+import { Check, LogOut, MapPin, Package, Pencil, Plus, Trash2, UserRound } from "lucide-react";
 import { Navigate, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,24 +7,21 @@ import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { type Address, useAuth } from "@/store/auth";
-import { useStorefront } from "@/store/storefront";
 
 const navItems = [
   { label: "Profile", to: "/account", icon: UserRound, end: true },
   { label: "Addresses", to: "/account/addresses", icon: MapPin },
   { label: "Orders", to: "/account/orders", icon: Package },
-  { label: "Wishlist", to: "/wishlist", icon: Heart },
 ];
 
 export function AccountLayout() {
-  const { user, signOut, addresses } = useAuth();
-  const { wishlistIds } = useStorefront();
+  const { user, signOut, addresses, orders } = useAuth();
   const location = useLocation();
 
   if (!user) return <Navigate to={`/login?next=${encodeURIComponent(location.pathname)}`} replace />;
 
   const initials = user.name.split(" ").map((part) => part[0]).join("").slice(0, 2).toUpperCase();
-  const counts: Record<string, number> = { "/account/addresses": addresses.length, "/wishlist": wishlistIds.length };
+  const counts: Record<string, number> = { "/account/addresses": addresses.length, "/account/orders": orders.length };
 
   return (
     <section className="pb-16 pt-8 sm:pb-20 sm:pt-10">
@@ -287,21 +284,61 @@ export function AddressesPage() {
   );
 }
 
-/* ---------------- Orders (placeholder) ---------------- */
+/* ---------------- Orders ---------------- */
 
 export function OrdersPage() {
+  const { orders } = useAuth();
+
+  if (orders.length === 0) {
+    return (
+      <Card>
+        <CardContent className="flex flex-col items-center gap-3 p-10 text-center">
+          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
+            <Package className="h-5 w-5" />
+          </span>
+          <p className="font-display text-xl">No orders yet</p>
+          <p className="max-w-sm text-sm text-muted-foreground">When you place an order it will appear here with tracking and easy returns.</p>
+          <Button asChild className="mt-2 rounded-full">
+            <NavLink to="/shop">Start shopping</NavLink>
+          </Button>
+        </CardContent>
+      </Card>
+    );
+  }
+
   return (
-    <Card>
-      <CardContent className="flex flex-col items-center gap-3 p-10 text-center">
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
-          <Package className="h-5 w-5" />
-        </span>
-        <p className="font-display text-xl">No orders yet</p>
-        <p className="max-w-sm text-sm text-muted-foreground">When you place an order it will appear here with tracking and easy returns.</p>
-        <Button asChild className="mt-2 rounded-full">
-          <NavLink to="/shop">Start shopping</NavLink>
-        </Button>
-      </CardContent>
-    </Card>
+    <div className="space-y-4">
+      <div>
+        <h2 className="font-display text-2xl">Orders</h2>
+        <p className="mt-1 text-sm text-muted-foreground">{orders.length} order{orders.length === 1 ? "" : "s"} placed.</p>
+      </div>
+      {orders.map((order) => (
+        <Card key={order.id}>
+          <CardContent className="p-5 sm:p-6">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p className="font-semibold">{order.id}</p>
+                <p className="text-xs text-muted-foreground">
+                  {new Date(order.placedAt).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" })} · {order.items.reduce((sum, item) => sum + item.quantity, 0)} items · {order.payment.label}
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="rounded-full bg-emerald-500/10 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300">{order.status}</span>
+                <span className="font-bold">${order.total.toFixed(2)}</span>
+              </div>
+            </div>
+            <div className="mt-4 flex items-center gap-2">
+              {order.items.slice(0, 5).map((item) => (
+                <img key={item.productId} src={item.image} alt={item.name} title={item.name} className="h-12 w-12 rounded-lg border-2 border-card object-cover" />
+              ))}
+              {order.items.length > 5 ? <span className="text-xs text-muted-foreground">+{order.items.length - 5}</span> : null}
+              <NavLink to={`/order/${order.id}`} className="ml-auto text-sm font-semibold text-brand hover:underline">
+                View details →
+              </NavLink>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
   );
 }

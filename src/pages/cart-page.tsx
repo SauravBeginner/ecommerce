@@ -5,6 +5,7 @@ import { EmptyState } from "@/components/store/empty-state";
 import { PageHero } from "@/components/store/page-hero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { shippingFor } from "@/lib/pricing";
 import { useAuth } from "@/store/auth";
 import { useStorefront } from "@/store/storefront";
 
@@ -17,7 +18,7 @@ export function CartPage() {
     (sum, item) => sum + item.product.price * item.quantity,
     0,
   );
-  const shipping = cartItems.length > 0 ? 18 : 0;
+  const shipping = cartItems.length > 0 ? shippingFor(subtotal, "standard") : 0;
   const total = subtotal + shipping;
 
   return (
@@ -57,7 +58,7 @@ export function CartPage() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-muted-foreground">Shipping</span>
-                  <span className="font-semibold">${shipping.toFixed(2)}</span>
+                  <span className="font-semibold">{shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}</span>
                 </div>
                 <div className="flex items-center justify-between border-t border-border/70 pt-3 text-base">
                   <span className="font-semibold">Total</span>
@@ -68,7 +69,7 @@ export function CartPage() {
                 className="w-full rounded-full"
                 size="lg"
                 disabled={cartItems.length === 0}
-                onClick={() => navigate(user ? "/account/addresses" : "/login?next=%2Fcart")}
+                onClick={() => navigate(user ? "/checkout" : "/login?next=%2Fcheckout")}
               >
                 <CreditCard className="h-4 w-4" />
                 {user ? "Proceed to checkout" : "Sign in to checkout"}

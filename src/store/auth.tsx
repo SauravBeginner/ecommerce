@@ -21,9 +21,35 @@ export type Address = {
   isDefault: boolean;
 };
 
+export type OrderItem = {
+  productId: number;
+  slug: string;
+  name: string;
+  image: string;
+  price: number;
+  quantity: number;
+};
+
+export type Order = {
+  id: string;
+  placedAt: string;
+  status: "Confirmed" | "Shipped" | "Delivered";
+  items: OrderItem[];
+  address: Address;
+  delivery: { label: string; cost: number; eta: string };
+  payment: { method: "card" | "upi" | "cod"; label: string };
+  subtotal: number;
+  discount: number;
+  couponCode?: string;
+  shipping: number;
+  total: number;
+};
+
 type AuthContextValue = {
   user: User | null;
   addresses: Address[];
+  orders: Order[];
+  placeOrder: (order: Omit<Order, "id" | "placedAt" | "status">) => Order;
   signIn: (email: string) => void;
   signUp: (name: string, email: string, marketingOptIn: boolean) => void;
   signOut: () => void;
@@ -36,6 +62,7 @@ type AuthContextValue = {
 const AuthContext = createContext<AuthContextValue | null>(null);
 const USER_KEY = "northstar-user";
 const ADDRESS_KEY = "northstar-addresses";
+const ORDERS_KEY = "northstar-orders";
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -58,6 +85,15 @@ function nameFromEmail(email: string) {
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(() => read<User | null>(USER_KEY, null));
   const [addresses, setAddresses] = useState<Address[]>(() => read<Address[]>(ADDRESS_KEY, []));
+  const [orders, setOrders] = useState<Order[]>(() => read<Order[]>(ORDERS_KEY, []));
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
+    } catch {
+      /* storage unavailable */
+    }
+  }, [orders]);
 
   useEffect(() => {
     try {
@@ -90,6 +126,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signOut = () => setUser(null);
 
+  const placeOrder = (draft: Omit<Order, "id" | "placedAt" | "status">) => {
+    const order: Order = {
+      ...draft,
+      id: `NS-${Date.now().toString(36).toUpperCase().slice(-6)}`,
+      placedAt: new Date().toISOString(),
+      status: "Confirmed",
+    };
+    setOrders((current) => [order, ...current]);
+    return order;
+  };
+
   const updateProfile = (patch: Partial<User>) =>
     setUser((current) => (current ? { ...current, ...patch } : current));
 
@@ -116,7 +163,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   return (
     <AuthContext.Provider
-      value={{ user, addresses, signIn, signUp, signOut, updateProfile, saveAddress, removeAddress, setDefaultAddress }}
+      value={{ user, addresses, orders, placeOrder, signIn, signUp, signOut, updateProfile, saveAddress, removeAddress, setDefaultAddress }}
     >
       {children}
     </AuthContext.Provider>

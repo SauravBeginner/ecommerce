@@ -11,6 +11,7 @@ import { api } from "@/lib/api";
 
 type StorefrontContextValue = {
   products: Product[];
+  ready: boolean;
   featuredProducts: Product[];
   cartItems: CartItem[];
   wishlistIds: number[];
@@ -21,6 +22,7 @@ type StorefrontContextValue = {
   submitNewsletter: () => void;
   addToCart: (product: Product) => void;
   removeFromCart: (productId: number) => void;
+  clearCart: () => void;
   updateCartQuantity: (productId: number, quantity: number) => void;
   toggleWishlist: (product: Product) => void;
   isWishlisted: (productId: number) => boolean;
@@ -30,6 +32,7 @@ const StorefrontContext = createContext<StorefrontContextValue | null>(null);
 
 export function StorefrontProvider({ children }: { children: ReactNode }) {
   const [products, setProducts] = useState<Product[]>([]);
+  const [ready, setReady] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [wishlistIds, setWishlistIds] = useState<number[]>([]);
   const [email, setEmail] = useState("");
@@ -42,6 +45,7 @@ export function StorefrontProvider({ children }: { children: ReactNode }) {
       const response = await api.get<Product[]>("products.json");
       if (mounted) {
         setProducts(response.data);
+        setReady(true);
         setCartItems(response.data.slice(0, 2).map((product, index) => ({
           product,
           quantity: index === 0 ? 1 : 2,
@@ -71,6 +75,8 @@ export function StorefrontProvider({ children }: { children: ReactNode }) {
     });
     setMessage(`${product.name} added to cart`);
   };
+
+  const clearCart = () => setCartItems([]);
 
   const removeFromCart = (productId: number) => {
     setCartItems((current) => current.filter((item) => item.product.id !== productId));
@@ -121,6 +127,7 @@ export function StorefrontProvider({ children }: { children: ReactNode }) {
     <StorefrontContext.Provider
       value={{
         products,
+        ready,
         featuredProducts,
         cartItems,
         wishlistIds,
@@ -131,6 +138,7 @@ export function StorefrontProvider({ children }: { children: ReactNode }) {
         submitNewsletter,
         addToCart,
         removeFromCart,
+        clearCart,
         updateCartQuantity,
         toggleWishlist,
         isWishlisted,
