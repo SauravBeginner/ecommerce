@@ -21,6 +21,19 @@ export type Address = {
   isDefault: boolean;
 };
 
+export type PaymentMethod = {
+  id: string;
+  type: "card" | "upi";
+  /** Cards: "Visa •••• 4242". UPI: the VPA itself. */
+  label: string;
+  brand?: string;
+  last4?: string;
+  expiry?: string;
+  holder?: string;
+  upiId?: string;
+  isDefault: boolean;
+};
+
 export type OrderItem = {
   productId: number;
   slug: string;
@@ -50,6 +63,11 @@ type AuthContextValue = {
   addresses: Address[];
   orders: Order[];
   placeOrder: (order: Omit<Order, "id" | "placedAt" | "status">) => Order;
+  paymentMethods: PaymentMethod[];
+  savePaymentMethod: (method: Omit<PaymentMethod, "id" | "isDefault"> & { isDefault?: boolean }) => void;
+  updatePaymentMethod: (id: string, patch: Partial<Omit<PaymentMethod, "id">>) => void;
+  removePaymentMethod: (id: string) => void;
+  setDefaultPaymentMethod: (id: string) => void;
   signIn: (email: string) => void;
   signUp: (name: string, email: string, marketingOptIn: boolean) => void;
   signOut: () => void;
@@ -63,6 +81,7 @@ const AuthContext = createContext<AuthContextValue | null>(null);
 const USER_KEY = "northstar-user";
 const ADDRESS_KEY = "northstar-addresses";
 const ORDERS_KEY = "northstar-orders";
+const PAYMENTS_KEY = "northstar-payments";
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -86,6 +105,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(() => read<User | null>(USER_KEY, null));
   const [addresses, setAddresses] = useState<Address[]>(() => read<Address[]>(ADDRESS_KEY, []));
   const [orders, setOrders] = useState<Order[]>(() => read<Order[]>(ORDERS_KEY, []));
+  const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>(() => read<PaymentMethod[]>(PAYMENTS_KEY, []));
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(PAYMENTS_KEY, JSON.stringify(paymentMethods));
+    } catch {
+      /* storage unavailable */
+    }
+  }, [paymentMethods]);
 
   useEffect(() => {
     try {
@@ -158,12 +186,35 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return next;
     });
 
+  const savePaymentMethod = (method: Omit<PaymentMethod, "id" | "isDefault"> & { isDefault?: boolean }) =>
+    setPaymentMethods((current) => {
+      const makeDefault = method.isDefault || current.length === 0;
+      const next = current.map((item) => (makeDefault ? { ...item, isDefault: false } : item));
+      return [...next, { ...method, id: `pm-${Date.now()}`, isDefault: makeDefault }];
+    });
+
+  const updatePaymentMethod = (id: string, patch: Partial<Omit<PaymentMethod, "id">>) =>
+    setPaymentMethods((current) => {
+      const next = current.map((item) => (item.id === id ? { ...item, ...patch } : item));
+      return patch.isDefault ? next.map((item) => ({ ...item, isDefault: item.id === id })) : next;
+    });
+
+  const removePaymentMethod = (id: string) =>
+    setPaymentMethods((current) => {
+      const next = current.filter((item) => item.id !== id);
+      if (next.length > 0 && !next.some((item) => item.isDefault)) next[0] = { ...next[0], isDefault: true };
+      return next;
+    });
+
+  const setDefaultPaymentMethod = (id: string) =>
+    setPaymentMethods((current) => current.map((item) => ({ ...item, isDefault: item.id === id })));
+
   const setDefaultAddress = (id: string) =>
     setAddresses((current) => current.map((item) => ({ ...item, isDefault: item.id === id })));
 
   return (
     <AuthContext.Provider
-      value={{ user, addresses, orders, placeOrder, signIn, signUp, signOut, updateProfile, saveAddress, removeAddress, setDefaultAddress }}
+      value={{ user, addresses, orders, placeOrder, paymentMethods, savePaymentMethod, updatePaymentMethod, removePaymentMethod, setDefaultPaymentMethod, signIn, signUp, signOut, updateProfile, saveAddress, removeAddress, setDefaultAddress }}
     >
       {children}
     </AuthContext.Provider>

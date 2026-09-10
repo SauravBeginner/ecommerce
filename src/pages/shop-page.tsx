@@ -23,7 +23,7 @@ const sortOptions = [
   { value: "rating", label: "Top rated" },
 ];
 
-const defaultFilters: FilterState = { search: "", category: "All", price: "all", sort: "featured", sale: false };
+const defaultFilters: FilterState = { search: "", category: "All", price: "all", sort: "featured", sale: false, newOnly: false };
 
 export function ShopPage() {
   const { products } = useStorefront();
@@ -34,6 +34,7 @@ export function ShopPage() {
     category: searchParams.get("category") ?? "All",
     sort: searchParams.get("sort") ?? "featured",
     sale: searchParams.get("sale") === "true",
+    newOnly: searchParams.get("new") === "true",
   });
 
   useEffect(() => {
@@ -41,12 +42,14 @@ export function ShopPage() {
     const sort = searchParams.get("sort");
     const sale = searchParams.get("sale") === "true";
     const q = searchParams.get("q");
+    const newOnly = searchParams.get("new") === "true";
     setFilters((f) => ({
       ...f,
       ...(category ? { category } : {}),
       ...(sort ? { sort } : {}),
       ...(q !== null ? { search: q } : {}),
       sale,
+      newOnly,
     }));
   }, [searchParams]);
 
@@ -74,8 +77,9 @@ export function ShopPage() {
         filters.category === "All" || product.category === filters.category;
 
       const matchesSale = !filters.sale || Boolean(product.originalPrice);
+      const matchesNew = !filters.newOnly || Boolean(product.isNew);
 
-      return matchesSearch && matchesCategory && matchesSale && matchesPrice(filters.price, product.price);
+      return matchesSearch && matchesCategory && matchesSale && matchesNew && matchesPrice(filters.price, product.price);
     });
 
     if (filters.sort === "price-low") return [...result].sort((a, b) => a.price - b.price);
@@ -83,14 +87,14 @@ export function ShopPage() {
     if (filters.sort === "rating") return [...result].sort((a, b) => b.rating - a.rating);
     if (filters.sort === "new") return [...result].sort((a, b) => b.id - a.id);
     return result;
-  }, [filters.category, filters.price, filters.sort, filters.sale, debouncedSearch, products]);
+  }, [filters.category, filters.price, filters.sort, filters.sale, filters.newOnly, debouncedSearch, products]);
 
   return (
     <>
       <PageHero
         eyebrow="Shop"
-        title={filters.search ? `Results for “${filters.search}”` : filters.sale ? "Sale" : filters.category === "All" ? "All products" : filters.category}
-        description={filters.sale ? "Limited-time prices across the edit." : "Find the right essentials by category, price, and rating."}
+        title={filters.search ? `Results for “${filters.search}”` : filters.sale ? "Sale" : filters.newOnly ? "New in" : filters.category === "All" ? "All products" : filters.category}
+        description={filters.sale ? "Limited-time prices across the edit." : filters.newOnly ? "The latest arrivals, fresh this season." : "Find the right essentials by category, price, and rating."}
       />
       <section className="pb-16 pt-8 sm:pb-20">
         <div className="container grid gap-8 lg:grid-cols-[260px_1fr]">

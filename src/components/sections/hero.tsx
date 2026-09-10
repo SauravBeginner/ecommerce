@@ -124,7 +124,7 @@ export function Hero() {
                 size="lg"
                 className="rounded-full border-foreground/25 bg-transparent px-6 hover:bg-foreground hover:text-background"
               >
-                <Link to="/shop?sort=new">
+                <Link to="/shop?new=true">
                   <Sparkles className="h-3.5 w-3.5" />
                   See what's new
                 </Link>

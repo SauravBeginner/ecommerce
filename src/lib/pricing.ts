@@ -23,3 +23,22 @@ export function discountFor(subtotal: number, code: string) {
 }
 
 export const money = (value: number) => `$${value.toFixed(2)}`;
+
+export const formatCardNumber = (value: string) =>
+  value.replace(/\D/g, "").slice(0, 19).replace(/(\d{4})(?=\d)/g, "$1 ");
+
+export const formatExpiry = (value: string) => {
+  const digits = value.replace(/\D/g, "").slice(0, 4);
+  return digits.length > 2 ? `${digits.slice(0, 2)} / ${digits.slice(2)}` : digits;
+};
+
+export function cardBrand(number: string) {
+  const digits = number.replace(/\D/g, "");
+  if (/^4/.test(digits)) return "Visa";
+  if (/^(5[1-5]|2[2-7])/.test(digits)) return "Mastercard";
+  if (/^3[47]/.test(digits)) return "Amex";
+  if (/^(60|65|81|82|508)/.test(digits)) return "RuPay";
+  return "Card";
+}
+
+export const isValidUpi = (value: string) => /^[\w.-]+@[\w-]+$/.test(value.trim());

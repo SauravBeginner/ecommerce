@@ -10,6 +10,7 @@ export type Product = {
   image: string;
   images?: string[];
   badge?: string;
+  isNew?: boolean;
   description: string;
   longDescription: string;
   colors: string[];

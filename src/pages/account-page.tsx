@@ -1,5 +1,5 @@
 import { type FormEvent, useEffect, useState } from "react";
-import { Check, LogOut, MapPin, Package, Pencil, Plus, Trash2, UserRound } from "lucide-react";
+import { Check, CreditCard, LogOut, MapPin, Package, Pencil, Plus, Smartphone, Trash2, UserRound } from "lucide-react";
 import { Navigate, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,21 +7,23 @@ import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { type Address, useAuth } from "@/store/auth";
+import { cardBrand, formatCardNumber, formatExpiry, isValidUpi } from "@/lib/pricing";
 
 const navItems = [
   { label: "Profile", to: "/account", icon: UserRound, end: true },
   { label: "Addresses", to: "/account/addresses", icon: MapPin },
+  { label: "Payment methods", to: "/account/payments", icon: CreditCard },
   { label: "Orders", to: "/account/orders", icon: Package },
 ];
 
 export function AccountLayout() {
-  const { user, signOut, addresses, orders } = useAuth();
+  const { user, signOut, addresses, orders, paymentMethods } = useAuth();
   const location = useLocation();
 
   if (!user) return <Navigate to={`/login?next=${encodeURIComponent(location.pathname)}`} replace />;
 
   const initials = user.name.split(" ").map((part) => part[0]).join("").slice(0, 2).toUpperCase();
-  const counts: Record<string, number> = { "/account/addresses": addresses.length, "/account/orders": orders.length };
+  const counts: Record<string, number> = { "/account/addresses": addresses.length, "/account/payments": paymentMethods.length, "/account/orders": orders.length };
 
   return (
     <section className="pb-16 pt-8 sm:pb-20 sm:pt-10">
@@ -279,6 +281,170 @@ export function AddressesPage() {
             </CardContent>
           </Card>
         ))}
+      </div>
+    </div>
+  );
+}
+
+/* ---------------- Payment methods ---------------- */
+
+export function PaymentsPage() {
+  const { user, paymentMethods, savePaymentMethod, updatePaymentMethod, removePaymentMethod, setDefaultPaymentMethod } = useAuth();
+  const [mode, setMode] = useState<"card" | "upi" | null>(null);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const editing = paymentMethods.find((m) => m.id === editingId) ?? null;
+  const [card, setCard] = useState({ number: "", holder: user?.name ?? "", expiry: "" });
+  const [upi, setUpi] = useState("");
+  const [makeDefault, setMakeDefault] = useState(false);
+  const [error, setError] = useState("");
+
+  const reset = () => { setMode(null); setEditingId(null); setCard({ number: "", holder: user?.name ?? "", expiry: "" }); setUpi(""); setMakeDefault(false); setError(""); };
+
+  const startEdit = (id: string) => {
+    const method = paymentMethods.find((m) => m.id === id);
+    if (!method) return;
+    setEditingId(id);
+    setMode(method.type);
+    setMakeDefault(method.isDefault);
+    if (method.type === "card") setCard({ number: "", holder: method.holder ?? "", expiry: method.expiry ?? "" });
+    else setUpi(method.upiId ?? "");
+    setError("");
+  };
+
+  const submit = (event: FormEvent) => {
+    event.preventDefault();
+    if (editing) {
+      if (editing.type === "card") {
+        if (!card.holder.trim() || card.expiry.replace(/\D/g, "").length !== 4) return setError("Enter the name and expiry.");
+        updatePaymentMethod(editing.id, { holder: card.holder.trim(), expiry: card.expiry, isDefault: makeDefault });
+      } else {
+        if (!isValidUpi(upi)) return setError("Enter a valid UPI ID, e.g. name@bank.");
+        updatePaymentMethod(editing.id, { upiId: upi.trim(), label: upi.trim(), isDefault: makeDefault });
+      }
+      reset();
+      return;
+    }
+    if (mode === "card") {
+      const digits = card.number.replace(/\D/g, "");
+      if (digits.length < 12 || !card.holder.trim() || card.expiry.replace(/\D/g, "").length !== 4) return setError("Enter the card number, name and expiry.");
+      const brand = cardBrand(digits);
+      savePaymentMethod({ type: "card", brand, last4: digits.slice(-4), expiry: card.expiry, holder: card.holder.trim(), label: `${brand} •••• ${digits.slice(-4)}`, isDefault: makeDefault });
+    } else if (mode === "upi") {
+      if (!isValidUpi(upi)) return setError("Enter a valid UPI ID, e.g. name@bank.");
+      savePaymentMethod({ type: "upi", upiId: upi.trim(), label: upi.trim(), isDefault: makeDefault });
+    }
+    reset();
+  };
+
+  return (
+    <div className="space-y-5">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h2 className="font-display text-2xl">Payment methods</h2>
+          <p className="mt-1 text-sm text-muted-foreground">Your default method is preselected at checkout.</p>
+        </div>
+        {!mode ? (
+          <div className="flex gap-2">
+            <Button className="rounded-full" onClick={() => setMode("card")}>
+              <Plus className="h-4 w-4" />
+              Add card
+            </Button>
+            <Button variant="outline" className="rounded-full" onClick={() => setMode("upi")}>
+              <Plus className="h-4 w-4" />
+              Add UPI
+            </Button>
+          </div>
+        ) : null}
+      </div>
+
+      {mode ? (
+        <Card>
+          <CardContent className="p-6 sm:p-8">
+            <h3 className="text-lg font-bold">{editing ? (editing.type === "card" ? `Edit ${editing.label}` : "Edit UPI ID") : mode === "card" ? "New card" : "New UPI ID"}</h3>
+            <form onSubmit={submit} className="mt-5 grid gap-4 sm:grid-cols-2" noValidate>
+              {mode === "card" ? (
+                <>
+                  <Field label="Card number" htmlFor="pm-number" className="sm:col-span-2" hint={editing ? "Card numbers can't be changed. Add a new card instead." : "Only the last four digits are kept. CVV is never stored; you enter it at checkout."}>
+                    <Input id="pm-number" inputMode="numeric" placeholder="4242 4242 4242 4242" value={editing ? `•••• •••• •••• ${editing.last4}` : card.number} onChange={(e) => setCard({ ...card, number: formatCardNumber(e.target.value) })} maxLength={23} className="font-mono tracking-[0.12em]" autoComplete="cc-number" readOnly={Boolean(editing)} disabled={Boolean(editing)} />
+                  </Field>
+                  <Field label="Name on card" htmlFor="pm-holder">
+                    <Input id="pm-holder" value={card.holder} onChange={(e) => setCard({ ...card, holder: e.target.value })} autoComplete="cc-name" />
+                  </Field>
+                  <Field label="Expiry" htmlFor="pm-expiry">
+                    <Input id="pm-expiry" placeholder="MM / YY" inputMode="numeric" value={card.expiry} onChange={(e) => setCard({ ...card, expiry: formatExpiry(e.target.value) })} maxLength={7} className="font-mono" autoComplete="cc-exp" />
+                  </Field>
+                </>
+              ) : (
+                <Field label="UPI ID" htmlFor="pm-upi" className="sm:col-span-2" hint="We'll send a collect request to this ID at checkout.">
+                  <Input id="pm-upi" placeholder="name@bank" value={upi} onChange={(e) => setUpi(e.target.value)} />
+                </Field>
+              )}
+              <label className="flex cursor-pointer items-center gap-3 text-sm sm:col-span-2">
+                <input type="checkbox" checked={makeDefault} onChange={(e) => setMakeDefault(e.target.checked)} className="h-4 w-4 accent-[hsl(var(--brand))]" />
+                Set as default payment method
+              </label>
+              {error ? <p className="rounded-lg bg-brand/10 px-3 py-2 text-sm text-brand sm:col-span-2">{error}</p> : null}
+              <div className="flex gap-3 sm:col-span-2">
+                <Button type="submit" className="rounded-full px-6">{editing ? "Save changes" : "Save"}</Button>
+                <Button type="button" variant="outline" className="rounded-full" onClick={reset}>Cancel</Button>
+              </div>
+            </form>
+          </CardContent>
+        </Card>
+      ) : null}
+
+      {paymentMethods.length === 0 && !mode ? (
+        <Card>
+          <CardContent className="flex flex-col items-center gap-3 p-10 text-center">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
+              <CreditCard className="h-5 w-5" />
+            </span>
+            <p className="font-display text-xl">No payment methods yet</p>
+            <p className="max-w-sm text-sm text-muted-foreground">Save a card or UPI ID to check out faster next time.</p>
+          </CardContent>
+        </Card>
+      ) : null}
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {paymentMethods.map((method) => {
+          const Icon = method.type === "card" ? CreditCard : Smartphone;
+          return (
+            <Card key={method.id} className={cn(method.isDefault && "border-brand/50")}>
+              <CardContent className="p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand">
+                      <Icon className="h-4 w-4" strokeWidth={1.8} />
+                    </span>
+                    <div>
+                      <p className="font-semibold">{method.label}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {method.type === "card" ? `${method.holder} · Expires ${method.expiry}` : "UPI"}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-1">
+                    <button type="button" className="rounded-full p-2 text-muted-foreground hover:bg-accent/60 hover:text-foreground" aria-label="Edit payment method" onClick={() => startEdit(method.id)}>
+                      <Pencil className="h-4 w-4" />
+                    </button>
+                    <button type="button" className="rounded-full p-2 text-muted-foreground hover:bg-accent/60 hover:text-brand" aria-label="Remove payment method" onClick={() => removePaymentMethod(method.id)}>
+                      <Trash2 className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+                <div className="mt-4 flex items-center gap-3">
+                  {method.isDefault ? (
+                    <span className="rounded-full bg-brand/10 px-2.5 py-0.5 text-xs font-semibold text-brand">Default</span>
+                  ) : (
+                    <button type="button" className="text-sm font-semibold text-brand hover:underline" onClick={() => setDefaultPaymentMethod(method.id)}>
+                      Make default
+                    </button>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })}
       </div>
     </div>
   );

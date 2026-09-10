@@ -16,7 +16,7 @@ const banners = [
     title: "Fresh styles just dropped",
     text: "Be the first to wear the season",
     cta: "Discover now",
-    to: "/shop?sort=new",
+    to: "/shop?new=true",
     image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=1000&q=80",
   },
 ];

@@ -16,7 +16,7 @@ type HeaderProps = {
 const navItems = [
   { label: "Home", to: "/", end: true },
   { label: "Shop", to: "/shop", end: true },
-  { label: "New in", to: "/shop?sort=new" },
+  { label: "New in", to: "/shop?new=true" },
   { label: "Sale", to: "/shop?sale=true", accent: true },
 ];
 

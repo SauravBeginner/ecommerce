@@ -9,6 +9,7 @@ export type FilterState = {
   price: string;
   sort: string;
   sale: boolean;
+  newOnly: boolean;
 };
 
 type ProductFiltersProps = {
@@ -36,7 +37,7 @@ export function ProductFilters({
   onReset,
 }: ProductFiltersProps) {
   const isDirty =
-    filters.search !== "" || filters.category !== "All" || filters.price !== "all" || filters.sale;
+    filters.search !== "" || filters.category !== "All" || filters.price !== "all" || filters.sale || filters.newOnly;
 
   const setSearch = (event: ChangeEvent<HTMLInputElement>) =>
     onChange({ ...filters, search: event.target.value });
@@ -132,7 +133,20 @@ export function ProductFilters({
         </div>
       </div>
 
-      {/* Sale toggle */}
+      {/* New / Sale toggles */}
+      <button
+        type="button"
+        onClick={() => onChange({ ...filters, newOnly: !filters.newOnly })}
+        className={cn(
+          "flex w-full items-center justify-between rounded-xl border px-4 py-3 text-sm font-semibold transition",
+          filters.newOnly ? "border-brand bg-brand/10 text-brand" : "border-border bg-card hover:border-foreground/40",
+        )}
+      >
+        New arrivals only
+        <span className={cn("h-5 w-9 rounded-full p-0.5 transition", filters.newOnly ? "bg-brand" : "bg-border")}>
+          <span className={cn("block h-4 w-4 rounded-full bg-card transition", filters.newOnly && "translate-x-4")} />
+        </span>
+      </button>
       <button
         type="button"
         onClick={() => onChange({ ...filters, sale: !filters.sale })}

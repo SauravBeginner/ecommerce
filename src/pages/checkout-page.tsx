@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { type DeliveryId, coupons, deliveryOptions, discountFor, money, shippingFor } from "@/lib/pricing";
+import { type DeliveryId, coupons, deliveryOptions, discountFor, formatCardNumber, formatExpiry, isValidUpi, money, shippingFor } from "@/lib/pricing";
 import { useAuth } from "@/store/auth";
 import { useStorefront } from "@/store/storefront";
 
@@ -17,14 +17,6 @@ const paymentMethods: { id: PaymentMethod; label: string; text: string; icon: ty
   { id: "upi", label: "UPI", text: "Google Pay, PhonePe, Paytm", icon: Smartphone },
   { id: "cod", label: "Cash on delivery", text: "Pay when it arrives", icon: Banknote },
 ];
-
-const formatCardNumber = (value: string) =>
-  value.replace(/\D/g, "").slice(0, 19).replace(/(\d{4})(?=\d)/g, "$1 ");
-
-const formatExpiry = (value: string) => {
-  const digits = value.replace(/\D/g, "").slice(0, 4);
-  return digits.length > 2 ? `${digits.slice(0, 2)} / ${digits.slice(2)}` : digits;
-};
 
 function StepHeading({ number, title, done }: { number: number; title: string; done?: boolean }) {
   return (
@@ -43,15 +35,18 @@ function StepHeading({ number, title, done }: { number: number; title: string; d
 }
 
 export function CheckoutPage() {
-  const { user, addresses, placeOrder } = useAuth();
+  const { user, addresses, placeOrder, paymentMethods: savedMethods } = useAuth();
   const { cartItems, clearCart, ready } = useStorefront();
   const navigate = useNavigate();
 
   const [addressId, setAddressId] = useState(() => addresses.find((a) => a.isDefault)?.id ?? addresses[0]?.id ?? "");
   const [delivery, setDelivery] = useState<DeliveryId>("standard");
-  const [payment, setPayment] = useState<PaymentMethod>("card");
+  const defaultSaved = savedMethods.find((m) => m.isDefault) ?? savedMethods[0];
+  const [payment, setPayment] = useState<PaymentMethod>(defaultSaved?.type ?? "card");
+  const [savedId, setSavedId] = useState<string>(defaultSaved?.id ?? "new");
   const [card, setCard] = useState({ number: "", name: "", expiry: "", cvc: "" });
   const [upiId, setUpiId] = useState("");
+  const [savedCvc, setSavedCvc] = useState("");
   const [couponInput, setCouponInput] = useState("");
   const [coupon, setCoupon] = useState("");
   const [couponMessage, setCouponMessage] = useState("");
@@ -82,11 +77,13 @@ export function CheckoutPage() {
   const submit = (event: FormEvent) => {
     event.preventDefault();
     if (!selectedAddress) return setError("Choose a delivery address.");
-    if (payment === "card") {
+    const usingSaved = savedId !== "new" && savedMethods.some((m) => m.id === savedId && m.type === payment);
+    if (payment === "card" && !usingSaved) {
       if (card.number.replace(/\s/g, "").length < 12 || !card.name.trim() || !card.expiry.trim() || card.cvc.length < 3)
         return setError("Enter your card details to continue.");
     }
-    if (payment === "upi" && !/^[\w.-]+@[\w-]+$/.test(upiId.trim())) return setError("Enter a valid UPI ID, e.g. name@bank.");
+    if (payment === "card" && usingSaved && savedCvc.length < 3) return setError("Enter the CVV for your saved card.");
+    if (payment === "upi" && !usingSaved && !isValidUpi(upiId)) return setError("Enter a valid UPI ID, e.g. name@bank.");
     setError("");
     setPlacing(true);
 
@@ -105,7 +102,10 @@ export function CheckoutPage() {
         })),
         address: selectedAddress,
         delivery: { label: option.label, cost: shipping, eta: option.eta },
-        payment: { method: payment, label: method.label },
+        payment: {
+          method: payment,
+          label: usingSaved ? savedMethods.find((m) => m.id === savedId)!.label : method.label,
+        },
         subtotal,
         discount,
         couponCode: coupon || undefined,
@@ -227,7 +227,7 @@ export function CheckoutPage() {
                           active ? "border-brand bg-brand/5" : "border-border hover:border-foreground/40",
                         )}
                       >
-                        <input type="radio" name="payment" className="sr-only" checked={active} onChange={() => setPayment(method.id)} />
+                        <input type="radio" name="payment" className="sr-only" checked={active} onChange={() => { setPayment(method.id); setSavedId(savedMethods.find((m) => m.type === method.id && m.isDefault)?.id ?? savedMethods.find((m) => m.type === method.id)?.id ?? "new"); }} />
                         <Icon className={cn("h-5 w-5", active ? "text-brand" : "text-muted-foreground")} />
                         <span className="font-semibold">{method.label}</span>
                         <span className="text-xs text-muted-foreground">{method.text}</span>
@@ -236,7 +236,47 @@ export function CheckoutPage() {
                   })}
                 </div>
 
-                {payment === "card" ? (
+                {(payment === "card" || payment === "upi") && savedMethods.some((m) => m.type === payment) ? (
+                  <div className="mt-5 grid gap-2 sm:grid-cols-2">
+                    {savedMethods.filter((m) => m.type === payment).map((m) => {
+                      const active = savedId === m.id;
+                      return (
+                        <label key={m.id} className={cn("flex cursor-pointer items-center justify-between rounded-xl border px-4 py-3 text-sm transition", active ? "border-brand bg-brand/5" : "border-border hover:border-foreground/40")}>
+                          <input type="radio" name="saved" className="sr-only" checked={active} onChange={() => setSavedId(m.id)} />
+                          <span>
+                            <span className="block font-semibold">{m.label}</span>
+                            {m.type === "card" ? <span className="block text-xs text-muted-foreground">Expires {m.expiry}</span> : null}
+                          </span>
+                          {active ? <Check className="h-4 w-4 text-brand" strokeWidth={3} /> : null}
+                        </label>
+                      );
+                    })}
+                    <label className={cn("flex cursor-pointer items-center rounded-xl border border-dashed px-4 py-3 text-sm font-semibold transition", savedId === "new" ? "border-brand text-brand" : "border-border text-muted-foreground hover:border-foreground/40")}>
+                      <input type="radio" name="saved" className="sr-only" checked={savedId === "new"} onChange={() => setSavedId("new")} />
+                      {payment === "card" ? "Use a new card" : "Use another UPI ID"}
+                    </label>
+                  </div>
+                ) : null}
+
+                {payment === "card" && savedId !== "new" && savedMethods.some((m) => m.id === savedId && m.type === "card") ? (
+                  <div className="mt-4 max-w-[200px]">
+                    <Field label="CVV" htmlFor="saved-cvc" hint="3–4 digits on the back of the card.">
+                      <Input
+                        id="saved-cvc"
+                        inputMode="numeric"
+                        type="password"
+                        placeholder="•••"
+                        value={savedCvc}
+                        onChange={(e) => setSavedCvc(e.target.value.replace(/\D/g, "").slice(0, 4))}
+                        maxLength={4}
+                        className="font-mono"
+                        autoComplete="cc-csc"
+                      />
+                    </Field>
+                  </div>
+                ) : null}
+
+                {payment === "card" && (savedId === "new" || !savedMethods.some((m) => m.id === savedId && m.type === "card")) ? (
                   <div className="mt-5 grid gap-4 sm:grid-cols-2">
                     <Field label="Card number" htmlFor="card-number" className="sm:col-span-2">
                       <Input id="card-number" inputMode="numeric" placeholder="4242 4242 4242 4242" value={card.number} onChange={(e) => setCard({ ...card, number: formatCardNumber(e.target.value) })} autoComplete="cc-number" maxLength={23} className="font-mono tracking-[0.12em]" />
@@ -251,17 +291,17 @@ export function CheckoutPage() {
                       <Input id="card-cvc" inputMode="numeric" placeholder="123" value={card.cvc} onChange={(e) => setCard({ ...card, cvc: e.target.value.replace(/\D/g, "").slice(0, 4) })} autoComplete="cc-csc" maxLength={4} className="font-mono" />
                     </Field>
                   </div>
-                ) : payment === "upi" ? (
+                ) : payment === "upi" && (savedId === "new" || !savedMethods.some((m) => m.id === savedId && m.type === "upi")) ? (
                   <div className="mt-5">
                     <Field label="UPI ID" htmlFor="upi-id" hint="You'll get a collect request on your UPI app.">
                       <Input id="upi-id" placeholder="name@bank" value={upiId} onChange={(e) => setUpiId(e.target.value)} />
                     </Field>
                   </div>
-                ) : (
+                ) : payment === "cod" ? (
                   <p className="mt-5 rounded-xl bg-accent/40 p-4 text-sm text-muted-foreground dark:bg-accent/20">
                     Pay in cash or by UPI to the courier when your order arrives.
                   </p>
-                )}
+                ) : null}
 
                 <p className="mt-5 flex items-center gap-2 text-xs text-muted-foreground">
                   <Lock className="h-3.5 w-3.5" />

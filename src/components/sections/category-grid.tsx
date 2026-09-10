@@ -58,13 +58,13 @@ export function CategoryGrid() {
                 alt={category.name}
                 className="img-warm absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(24_20%_12%/0.75)] via-transparent to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 text-background">
+              <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-[hsl(34_45%_94%/0.95)] via-[hsl(34_45%_94%/0.55)] to-transparent dark:from-[hsl(24_20%_10%/0.92)] dark:via-[hsl(24_20%_10%/0.5)]" />
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 text-foreground">
                 <div>
                   <p className="font-display text-lg leading-tight">{category.name}</p>
-                  <p className="text-[11px] text-background/70">{category.sub}</p>
+                  <p className="text-[11px] text-foreground/70">{category.sub}</p>
                 </div>
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-background text-foreground transition group-hover:bg-brand group-hover:text-brand-foreground">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background shadow-sm transition group-hover:bg-brand group-hover:text-brand-foreground">
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>
