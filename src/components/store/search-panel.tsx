@@ -1,6 +1,7 @@
 import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, Search, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { useDebouncedValue } from "@/lib/use-debounced-value";
 import { useStorefront } from "@/store/storefront";
 
 type SearchPanelProps = {
@@ -33,15 +34,17 @@ export function SearchPanel({ open, onClose }: SearchPanelProps) {
   }, [open, onClose]);
 
   const term = query.trim().toLowerCase();
+  const debouncedTerm = useDebouncedValue(term, 250);
+  const pending = term !== debouncedTerm;
   const matches = useMemo(() => {
-    if (!term) return [];
+    if (!debouncedTerm) return [];
     return products.filter(
       (product) =>
-        product.name.toLowerCase().includes(term) ||
-        product.category.toLowerCase().includes(term) ||
-        product.description.toLowerCase().includes(term),
+        product.name.toLowerCase().includes(debouncedTerm) ||
+        product.category.toLowerCase().includes(debouncedTerm) ||
+        product.description.toLowerCase().includes(debouncedTerm),
     );
-  }, [products, term]);
+  }, [products, debouncedTerm]);
   const shown = matches.slice(0, 6);
 
   const submit = (event: FormEvent) => {
@@ -92,6 +95,11 @@ export function SearchPanel({ open, onClose }: SearchPanelProps) {
                 </button>
               ))}
             </div>
+          ) : pending ? (
+            <p className="mt-5 flex items-center gap-2 text-sm text-muted-foreground">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-brand" />
+              Searching…
+            </p>
           ) : matches.length === 0 ? (
             <p className="mt-5 text-sm text-muted-foreground">
               No matches for “{query.trim()}”. Try a category like “Audio” or “Footwear”.

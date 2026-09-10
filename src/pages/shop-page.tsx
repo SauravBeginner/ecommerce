@@ -5,6 +5,7 @@ import { ProductFilters, type FilterState } from "@/components/store/product-fil
 import { ProductCard } from "@/components/store/product-card";
 import { PageHero } from "@/components/store/page-hero";
 import { EmptyState } from "@/components/store/empty-state";
+import { useDebouncedValue } from "@/lib/use-debounced-value";
 import { useStorefront } from "@/store/storefront";
 
 function matchesPrice(priceFilter: string, price: number) {
@@ -59,8 +60,10 @@ export function ShopPage() {
     [products],
   );
 
+  const debouncedSearch = useDebouncedValue(filters.search, 250);
+
   const filteredProducts = useMemo(() => {
-    const loweredSearch = filters.search.toLowerCase();
+    const loweredSearch = debouncedSearch.trim().toLowerCase();
 
     const result = products.filter((product) => {
       const matchesSearch =
@@ -80,7 +83,7 @@ export function ShopPage() {
     if (filters.sort === "rating") return [...result].sort((a, b) => b.rating - a.rating);
     if (filters.sort === "new") return [...result].sort((a, b) => b.id - a.id);
     return result;
-  }, [filters, products]);
+  }, [filters.category, filters.price, filters.sort, filters.sale, debouncedSearch, products]);
 
   return (
     <>
