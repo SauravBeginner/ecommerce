@@ -154,19 +154,23 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
       >
         <div className="min-h-0">
           <nav className="container flex flex-col py-3">
-            {navItems.map((item) => (
+            {navItems.map((item) => {
+              const active = isActive(item);
+              return (
                 <NavLink
                   key={item.label}
                   to={item.to}
+                  aria-current={active ? "page" : undefined}
                   className={cn(
-                    "flex items-center justify-between border-b border-border/60 py-3 font-display text-xl last:border-b-0",
-                    item.accent ? "text-brand" : "text-foreground",
+                    "flex items-center justify-between border-b border-border/60 py-3 font-display text-xl transition last:border-b-0",
+                    active ? "border-l-2 border-l-brand pl-3 text-brand" : item.accent ? "text-brand" : "text-foreground",
                   )}
                 >
                   {item.label}
-                  <span className="text-sm text-muted-foreground">→</span>
+                  <span className={cn("text-sm", active ? "text-brand" : "text-muted-foreground")}>→</span>
                 </NavLink>
-            ))}
+              );
+            })}
             <div className="mt-3 grid grid-cols-2 gap-2 sm:hidden">
               <Link to="/wishlist" className="flex items-center justify-center gap-2 rounded-full border border-border bg-card py-2.5 text-sm font-semibold">
                 <Heart className="h-4 w-4" strokeWidth={1.8} />
