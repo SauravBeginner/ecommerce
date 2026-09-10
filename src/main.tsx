@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, useLocation } from "react-router-dom";
 import App from "./App";
+import { AuthProvider } from "./store/auth";
 import { StorefrontProvider } from "./store/storefront";
 import "./index.css";
 
@@ -16,10 +17,12 @@ function ScrollToTop() {
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <StorefrontProvider>
-        <ScrollToTop />
-        <App />
-      </StorefrontProvider>
+      <AuthProvider>
+        <StorefrontProvider>
+          <ScrollToTop />
+          <App />
+        </StorefrontProvider>
+      </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );

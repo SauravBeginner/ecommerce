@@ -29,6 +29,7 @@ export function ShopPage() {
   const [searchParams] = useSearchParams();
   const [filters, setFilters] = useState<FilterState>({
     ...defaultFilters,
+    search: searchParams.get("q") ?? "",
     category: searchParams.get("category") ?? "All",
     sort: searchParams.get("sort") ?? "featured",
     sale: searchParams.get("sale") === "true",
@@ -38,10 +39,12 @@ export function ShopPage() {
     const category = searchParams.get("category");
     const sort = searchParams.get("sort");
     const sale = searchParams.get("sale") === "true";
+    const q = searchParams.get("q");
     setFilters((f) => ({
       ...f,
       ...(category ? { category } : {}),
       ...(sort ? { sort } : {}),
+      ...(q !== null ? { search: q } : {}),
       sale,
     }));
   }, [searchParams]);
@@ -83,7 +86,7 @@ export function ShopPage() {
     <>
       <PageHero
         eyebrow="Shop"
-        title={filters.sale ? "Sale" : filters.category === "All" ? "All products" : filters.category}
+        title={filters.search ? `Results for “${filters.search}”` : filters.sale ? "Sale" : filters.category === "All" ? "All products" : filters.category}
         description={filters.sale ? "Limited-time prices across the edit." : "Find the right essentials by category, price, and rating."}
       />
       <section className="pb-16 pt-8 sm:pb-20">

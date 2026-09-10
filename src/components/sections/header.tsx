@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { Heart, Menu, Moon, Search, ShoppingBag, Sun, X } from "lucide-react";
+import { Heart, Menu, Moon, Search, ShoppingBag, Sun, UserRound, X } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/store/auth";
+import { SearchPanel } from "@/components/store/search-panel";
 
 type HeaderProps = {
   cartCount: number;
@@ -29,11 +31,15 @@ function CountBubble({ count }: { count: number }) {
 
 export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: HeaderProps) {
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const { user } = useAuth();
   const location = useLocation();
+  const initials = user ? user.name.split(" ").map((part) => part[0]).join("").slice(0, 2).toUpperCase() : "";
   const currentPath = `${location.pathname}${location.search}`;
 
   useEffect(() => {
     setOpen(false);
+    setSearchOpen(false);
   }, [location]);
 
   const isActive = (item: (typeof navItems)[number]) =>
@@ -75,9 +81,9 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
 
         {/* Actions */}
         <div className="flex items-center gap-1">
-          <Link to="/shop" className={iconButton} aria-label="Search products">
+          <button type="button" className={iconButton} aria-label="Search products" onClick={() => setSearchOpen(true)}>
             <Search className="h-[18px] w-[18px]" strokeWidth={1.8} />
-          </Link>
+          </button>
           <button
             type="button"
             className={iconButton}
@@ -94,9 +100,22 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
             <ShoppingBag className="h-[18px] w-[18px]" strokeWidth={1.8} />
             <CountBubble count={cartCount} />
           </Link>
-          <Button asChild size="sm" className="ml-2 hidden rounded-full px-5 lg:inline-flex">
-            <Link to="/shop">Shop now</Link>
-          </Button>
+          {user ? (
+            <Link
+              to="/account"
+              aria-label="My account"
+              className="ml-2 flex h-10 w-10 items-center justify-center rounded-full bg-brand text-sm font-bold text-brand-foreground shadow-soft transition hover:scale-105"
+            >
+              {initials}
+            </Link>
+          ) : (
+            <Button asChild size="sm" className="ml-2 hidden rounded-full px-5 md:inline-flex">
+              <Link to="/login">
+                <UserRound className="h-4 w-4" strokeWidth={2} />
+                Sign in
+              </Link>
+            </Button>
+          )}
           <button
             type="button"
             className={cn(iconButton, "md:hidden")}
@@ -134,9 +153,13 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
             <Button asChild className="mt-3 rounded-full">
               <Link to="/shop">Shop now</Link>
             </Button>
+            <Button asChild variant="outline" className="mt-2 rounded-full">
+              <Link to={user ? "/account" : "/login"}>{user ? "My account" : "Sign in / Create account"}</Link>
+            </Button>
           </nav>
         </div>
       </div>
+      <SearchPanel open={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );
 }
