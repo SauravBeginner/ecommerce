@@ -9,7 +9,7 @@ type SearchPanelProps = {
   onClose: () => void;
 };
 
-const suggestions = ["Sneakers", "Headphones", "Blazer", "Watch", "Desk lamp", "Backpack"];
+const suggestions = ["Sneakers", "Headphones", "Blazer", "Watch", "Kids", "Backpack"];
 
 export function SearchPanel({ open, onClose }: SearchPanelProps) {
   const { products } = useStorefront();

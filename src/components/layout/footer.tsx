@@ -5,6 +5,7 @@ const shopLinks = [
   { label: "All Products", to: "/shop" },
   { label: "Women", to: "/shop?for=women" },
   { label: "Men", to: "/shop?for=men" },
+  { label: "Kids", to: "/shop?for=kids" },
   { label: "Wearables", to: "/shop?category=Wearables" },
   { label: "Apparel", to: "/shop?category=Apparel" },
   { label: "Desk Setup", to: "/shop?category=Desk%20Setup" },
@@ -13,20 +14,21 @@ const shopLinks = [
 ];
 
 const helpLinks = [
+  { label: "About Us", to: "/about" },
   { label: "FAQs", to: "/contact" },
-  { label: "Shipping Policy", to: "/" },
-  { label: "Return & Exchange", to: "/" },
-  { label: "Track Your Order", to: "/" },
-  { label: "Size Guide", to: "/" },
-  { label: "Privacy Policy", to: "/" },
+  { label: "Shipping Policy", to: "/help/shipping" },
+  { label: "Return & Exchange", to: "/help/returns" },
+  { label: "Track Your Order", to: "/track" },
+  { label: "Size Guide", to: "/help/size-guide" },
+  { label: "Privacy Policy", to: "/help/privacy" },
 ];
 
 
 const socialLinks = [
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: Twitter, label: "Twitter / X", href: "#" },
-  { icon: Facebook, label: "Facebook", href: "#" },
-  { icon: Youtube, label: "YouTube", href: "#" },
+  { icon: Instagram, label: "Instagram", href: "https://instagram.com/ecomstore" },
+  { icon: Twitter, label: "Twitter / X", href: "https://x.com/ecomstore" },
+  { icon: Facebook, label: "Facebook", href: "https://facebook.com/ecomstore" },
+  { icon: Youtube, label: "YouTube", href: "https://youtube.com/@ecomstore" },
 ];
 
 type FooterProps = {
@@ -42,7 +44,7 @@ export function Footer({ message }: FooterProps) {
           {/* Brand */}
           <div className="space-y-5">
             <Link to="/" className="inline-flex items-baseline font-display text-2xl tracking-tight text-foreground">
-              Northstar<span className="text-brand">.</span>
+              ecom<span className="text-brand">.</span>
             </Link>
             <p className="text-sm leading-6 text-muted-foreground">
               Curated apparel, audio, carry goods, and desk pieces for sharper daily routines. Quality you can feel, delivered fast.
@@ -52,6 +54,8 @@ export function Footer({ message }: FooterProps) {
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="flex h-9 w-9 items-center justify-center rounded-md border border-border/80 text-muted-foreground transition hover:border-primary/50 hover:bg-primary/5 hover:text-primary"
                 >
@@ -93,9 +97,9 @@ export function Footer({ message }: FooterProps) {
           <div className="space-y-4">
             <p className="font-bold">Contact Us</p>
             <div className="space-y-2.5 text-sm text-muted-foreground">
-              <a href="mailto:support@northstar.com" className="flex items-center gap-2 transition-colors hover:text-primary">
+              <a href="mailto:support@ecom.tech10x.in" className="flex items-center gap-2 transition-colors hover:text-primary">
                 <Mail className="h-3.5 w-3.5 shrink-0 text-primary" />
-                <span>support@northstar.com</span>
+                <span>support@ecom.tech10x.in</span>
               </a>
               <a href="tel:+18001234567" className="flex items-center gap-2 transition-colors hover:text-primary">
                 <Phone className="h-3.5 w-3.5 shrink-0 text-primary" />
@@ -141,13 +145,13 @@ export function Footer({ message }: FooterProps) {
                 {message}
               </span>
             ) : (
-              <span>© 2026 Northstar Commerce. All rights reserved.</span>
+              <span>© 2026 Ecom. All rights reserved.</span>
             )}
           </div>
           <div className="flex flex-wrap gap-4">
-            <Link to="/" className="transition-colors hover:text-foreground">Terms of Service</Link>
-            <Link to="/" className="transition-colors hover:text-foreground">Cookie Policy</Link>
-            <Link to="/" className="transition-colors hover:text-foreground">Accessibility</Link>
+            <Link to="/help/terms" className="transition-colors hover:text-foreground">Terms of Service</Link>
+            <Link to="/help/cookies" className="transition-colors hover:text-foreground">Cookie Policy</Link>
+            <Link to="/help/accessibility" className="transition-colors hover:text-foreground">Accessibility</Link>
           </div>
         </div>
       </div>

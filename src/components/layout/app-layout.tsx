@@ -9,14 +9,14 @@ type Theme = "light" | "dark";
 export function AppLayout() {
   const { cartItems, wishlistIds, message } = useStorefront();
   const [theme, setTheme] = useState<Theme>(() => {
-    const savedTheme = window.localStorage.getItem("northstar-theme");
+    const savedTheme = window.localStorage.getItem("ecom-theme");
     return savedTheme === "dark" ? "dark" : "light";
   });
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
-    window.localStorage.setItem("northstar-theme", theme);
+    window.localStorage.setItem("ecom-theme", theme);
   }, [theme]);
 
   return (
@@ -24,7 +24,7 @@ export function AppLayout() {
       {/* Announcement bar — scrolls away, not sticky */}
       <div className="bg-brand px-4 py-2 text-center text-xs font-medium text-brand-foreground">
         Free shipping on all orders above $120 · Use code{" "}
-        <span className="font-bold tracking-wide">NORTHSTAR10</span> for 10% off{" "}
+        <span className="font-bold tracking-wide">ECOM10</span> for 10% off{" "}
         <Link to="/shop" className="ml-1 font-bold underline underline-offset-2 hover:opacity-80">
           Shop now →
         </Link>

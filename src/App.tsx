@@ -1,9 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { AppLayout } from "@/components/layout/app-layout";
+import { AboutPage } from "@/pages/about-page";
 import { AccountLayout, AddressesPage, OrdersPage, PaymentsPage, ProfilePage } from "@/pages/account-page";
 import { CartPage } from "@/pages/cart-page";
 import { CheckoutPage } from "@/pages/checkout-page";
 import { ContactPage } from "@/pages/contact-page";
+import { InfoPage } from "@/pages/info-page";
+import { TrackPage } from "@/pages/track-page";
 import { OrderPage } from "@/pages/order-page";
 import { LoginPage } from "@/pages/login-page";
 import { HomePage } from "@/pages/home-page";
@@ -20,7 +23,10 @@ function App() {
         <Route path="/product/:slug" element={<ProductDetailsPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/wishlist" element={<WishlistPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/help/:slug" element={<InfoPage />} />
+        <Route path="/track" element={<TrackPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/order/:id" element={<OrderPage />} />

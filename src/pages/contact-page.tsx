@@ -12,10 +12,10 @@ import { useAuth } from "@/store/auth";
 const topics = ["Order status", "Returns & exchanges", "Product question", "Something else"];
 
 const details = [
-  { icon: Mail, title: "Email", lines: ["support@northstar.com"], href: "mailto:support@northstar.com" },
+  { icon: Mail, title: "Email", lines: ["support@ecom.tech10x.in"], href: "mailto:support@ecom.tech10x.in" },
   { icon: Phone, title: "Phone", lines: ["+1 (800) 123-4567"], href: "tel:+18001234567" },
   { icon: Clock, title: "Hours", lines: ["Mon – Fri, 9am – 6pm EST", "We reply within one business day"] },
-  { icon: MapPin, title: "Studio", lines: ["12 Northstar Lane", "Brooklyn, NY 11201"] },
+  { icon: MapPin, title: "Studio", lines: ["12 Studio Lane", "Brooklyn, NY 11201"] },
 ];
 
 const faqs = [

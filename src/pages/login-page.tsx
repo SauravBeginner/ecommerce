@@ -53,7 +53,7 @@ export function LoginPage() {
         <div className="relative hidden overflow-hidden rounded-3xl bg-accent/50 p-10 dark:bg-accent/20 lg:block lg:min-h-[600px]">
           <div className="absolute -right-16 -top-16 h-72 w-72 rounded-full bg-brand/80" />
           <div className="relative">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand">Northstar members</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand">Ecom members</p>
             <h2 className="mt-4 font-display text-5xl leading-[1.02]">
               Good things,
               <br />
@@ -80,7 +80,7 @@ export function LoginPage() {
         {/* Form */}
         <div className="mx-auto w-full max-w-md">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand">
-            {mode === "signin" ? "Welcome back" : "Join Northstar"}
+            {mode === "signin" ? "Welcome back" : "Join Ecom"}
           </p>
           <h1 className="mt-3 font-display text-4xl sm:text-5xl">
             {mode === "signin" ? "Sign in" : "Create account"}

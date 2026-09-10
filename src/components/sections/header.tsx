@@ -23,6 +23,7 @@ const navItems: NavItem[] = [
   { label: "Shop", to: "/shop", isActive: (path, p) => onShop(path) && p.get("new") !== "true" && p.get("sale") !== "true" },
   { label: "New in", to: "/shop?new=true", isActive: (path, p) => onShop(path) && p.get("new") === "true" },
   { label: "Sale", to: "/shop?sale=true", accent: true, isActive: (path, p) => onShop(path) && p.get("sale") === "true" },
+  { label: "About us", to: "/about", isActive: (path) => path === "/about" || path.startsWith("/help/") || path === "/track" },
   { label: "Contact", to: "/contact", isActive: (path) => path === "/contact" },
 ];
 
@@ -59,7 +60,7 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
 
   // Exactly one link is highlighted. When filters overlap (e.g. men + sale), the more specific
   // campaign section wins: Sale > New in > Women / Men > Shop.
-  const priority = ["Sale", "New in", "Shop", "Home", "Contact"];
+  const priority = ["Sale", "New in", "Shop", "Home", "About us", "Contact"];
   const activeLabel = priority.find((label) => {
     const item = navItems.find((entry) => entry.label === label);
     return item?.isActive(location.pathname, params);
@@ -74,7 +75,7 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
       <div className="container flex h-[68px] items-center justify-between gap-4 lg:gap-6">
         {/* Wordmark */}
         <Link to="/" className="flex items-baseline gap-0.5 font-display text-2xl tracking-tight text-foreground">
-          Northstar
+          ecom
           <span className="text-brand">.</span>
         </Link>
 

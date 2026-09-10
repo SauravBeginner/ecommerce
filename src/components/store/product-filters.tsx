@@ -10,7 +10,7 @@ export type FilterState = {
   sort: string;
   sale: boolean;
   newOnly: boolean;
-  gender: "all" | "women" | "men" | "unisex";
+  gender: "all" | "women" | "men" | "kids" | "unisex";
 };
 
 type ProductFiltersProps = {
@@ -61,8 +61,8 @@ export function ProductFilters({
       {/* Shop for */}
       <div>
         <h3 className="mb-3 font-display text-lg">Shop for</h3>
-        <div className="grid grid-cols-4 gap-1 rounded-full border border-border bg-card p-1 text-xs font-semibold">
-          {(["all", "women", "men", "unisex"] as const).map((value) => (
+        <div className="grid grid-cols-5 gap-1 rounded-full border border-border bg-card p-1 text-xs font-semibold">
+          {(["all", "women", "men", "kids", "unisex"] as const).map((value) => (
             <button
               key={value}
               type="button"
@@ -189,7 +189,7 @@ export function ProductFilters({
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-background/60">Member offer</p>
         <p className="mt-2 font-display text-2xl leading-tight">10% off your first order</p>
         <p className="mt-2 text-xs text-background/70">
-          Use code <span className="font-bold text-background">NORTHSTAR10</span> at checkout.
+          Use code <span className="font-bold text-background">ECOM10</span> at checkout.
         </p>
       </div>
     </aside>

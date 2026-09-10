@@ -8,7 +8,7 @@ export const deliveryOptions = [
 export type DeliveryId = (typeof deliveryOptions)[number]["id"];
 
 export const coupons: Record<string, { percent: number; label: string }> = {
-  NORTHSTAR10: { percent: 10, label: "10% off your order" },
+  ECOM10: { percent: 10, label: "10% off your order" },
 };
 
 export function shippingFor(subtotal: number, delivery: DeliveryId) {

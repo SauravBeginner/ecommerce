@@ -25,8 +25,11 @@ const sortOptions = [
 
 const defaultFilters: FilterState = { search: "", category: "All", price: "all", sort: "featured", sale: false, newOnly: false, gender: "all" };
 
+const genderLabel: Record<string, string> = { women: "Women", men: "Men", kids: "Kids", unisex: "Unisex" };
+const genderPossessive: Record<string, string> = { women: "Women's", men: "Men's", kids: "Kids'", unisex: "Unisex" };
+
 const genderFromParam = (value: string | null): FilterState["gender"] =>
-  value === "women" || value === "men" || value === "unisex" ? value : "all";
+  value === "women" || value === "men" || value === "kids" || value === "unisex" ? value : "all";
 
 function filtersFromParams(params: URLSearchParams): FilterState {
   return {
@@ -85,7 +88,10 @@ export function ShopPage() {
 
       const matchesSale = !filters.sale || Boolean(product.originalPrice);
       const matchesNew = !filters.newOnly || Boolean(product.isNew);
-      const matchesGender = filters.gender === "all" || product.gender === filters.gender;
+      const matchesGender =
+        filters.gender === "all" ||
+        product.gender === filters.gender ||
+        ((filters.gender === "women" || filters.gender === "men") && product.gender === "unisex");
 
       return matchesSearch && matchesCategory && matchesSale && matchesNew && matchesGender && matchesPrice(filters.price, product.price);
     });
@@ -109,14 +115,14 @@ export function ShopPage() {
               : filters.newOnly
                 ? "New in"
                 : filters.gender !== "all" && filters.category === "All"
-                  ? filters.gender === "women" ? "Women" : filters.gender === "men" ? "Men" : "Unisex"
+                  ? genderLabel[filters.gender]
                   : filters.category === "All"
                     ? "All products"
                     : filters.gender !== "all"
-                      ? `${filters.gender === "women" ? "Women's" : filters.gender === "men" ? "Men's" : "Unisex"} ${filters.category.toLowerCase()}`
+                      ? `${genderPossessive[filters.gender]} ${filters.category.toLowerCase()}`
                       : filters.category
         }
-        description={filters.sale ? "Limited-time prices across the edit." : filters.newOnly ? "The latest arrivals, fresh this season." : filters.gender === "women" ? "Apparel, footwear, bags and watches for her." : filters.gender === "men" ? "Apparel, footwear, carry goods and watches for him." : "Find the right essentials by category, price, and rating."}
+        description={filters.sale ? "Limited-time prices across the edit." : filters.newOnly ? "The latest arrivals, fresh this season." : filters.gender === "women" ? "Apparel, footwear, bags and watches for her, plus everything unisex." : filters.gender === "men" ? "Apparel, footwear, carry goods and watches for him, plus everything unisex." : filters.gender === "kids" ? "Play-proof apparel, sneakers and gadgets for little ones." : "Find the right essentials by category, price, and rating."}
       />
       <section className="pb-16 pt-8 sm:pb-20">
         <div className="container grid gap-8 lg:grid-cols-[260px_1fr] [&>*]:min-w-0">

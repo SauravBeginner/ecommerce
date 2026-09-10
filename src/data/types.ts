@@ -11,7 +11,7 @@ export type Product = {
   images?: string[];
   badge?: string;
   isNew?: boolean;
-  gender?: "women" | "men" | "unisex";
+  gender?: "women" | "men" | "kids" | "unisex";
   description: string;
   longDescription: string;
   colors: string[];

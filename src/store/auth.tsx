@@ -78,10 +78,10 @@ type AuthContextValue = {
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
-const USER_KEY = "northstar-user";
-const ADDRESS_KEY = "northstar-addresses";
-const ORDERS_KEY = "northstar-orders";
-const PAYMENTS_KEY = "northstar-payments";
+const USER_KEY = "ecom-user";
+const ADDRESS_KEY = "ecom-addresses";
+const ORDERS_KEY = "ecom-orders";
+const PAYMENTS_KEY = "ecom-payments";
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -98,7 +98,7 @@ function nameFromEmail(email: string) {
     .split(/[._-]+/)
     .filter(Boolean)
     .map((part) => part[0].toUpperCase() + part.slice(1))
-    .join(" ") || "Northstar member";
+    .join(" ") || "Ecom member";
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -157,7 +157,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const placeOrder = (draft: Omit<Order, "id" | "placedAt" | "status">) => {
     const order: Order = {
       ...draft,
-      id: `NS-${Date.now().toString(36).toUpperCase().slice(-6)}`,
+      id: `EC-${Date.now().toString(36).toUpperCase().slice(-6)}`,
       placedAt: new Date().toISOString(),
       status: "Confirmed",
     };
