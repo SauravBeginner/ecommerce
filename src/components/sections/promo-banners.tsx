@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const banners = [
   {
     eyebrow: "Limited time",
-    title: "Up to 50% off",
+    title: "Up to 30% off",
     text: "On selected styles",
     cta: "Shop now",
     to: "/shop?sale=true",

@@ -42,6 +42,7 @@ export function SearchPanel({ open, onClose }: SearchPanelProps) {
       (product) =>
         product.name.toLowerCase().includes(debouncedTerm) ||
         product.category.toLowerCase().includes(debouncedTerm) ||
+        (product.gender ?? "").includes(debouncedTerm) ||
         product.description.toLowerCase().includes(debouncedTerm),
     );
   }, [products, debouncedTerm]);

@@ -65,3 +65,14 @@
     filter: saturate(0.85) sepia(0.12) contrast(1.02);
   }
 }
+
+@layer utilities {
+  /* Horizontal chip rows scroll by touch; hide the bar itself */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

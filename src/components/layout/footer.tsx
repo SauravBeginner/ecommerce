@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const shopLinks = [
   { label: "All Products", to: "/shop" },
+  { label: "Women", to: "/shop?for=women" },
+  { label: "Men", to: "/shop?for=men" },
   { label: "Wearables", to: "/shop?category=Wearables" },
   { label: "Apparel", to: "/shop?category=Apparel" },
   { label: "Desk Setup", to: "/shop?category=Desk%20Setup" },
@@ -11,7 +13,7 @@ const shopLinks = [
 ];
 
 const helpLinks = [
-  { label: "FAQs", to: "/" },
+  { label: "FAQs", to: "/contact" },
   { label: "Shipping Policy", to: "/" },
   { label: "Return & Exchange", to: "/" },
   { label: "Track Your Order", to: "/" },
@@ -19,13 +21,6 @@ const helpLinks = [
   { label: "Privacy Policy", to: "/" },
 ];
 
-const companyLinks = [
-  { label: "About Us", to: "/" },
-  { label: "Careers", to: "/" },
-  { label: "Sustainability", to: "/" },
-  { label: "Press & Media", to: "/" },
-  { label: "Affiliate Program", to: "/" },
-];
 
 const socialLinks = [
   { icon: Instagram, label: "Instagram", href: "#" },
@@ -94,28 +89,18 @@ export function Footer({ message }: FooterProps) {
             </ul>
           </div>
 
-          {/* Company + Contact */}
+          {/* Contact */}
           <div className="space-y-4">
-            <p className="font-bold">Company</p>
-            <ul className="space-y-2.5 text-sm text-muted-foreground">
-              {companyLinks.map((link) => (
-                <li key={link.label}>
-                  <Link to={link.to} className="transition-colors hover:text-primary">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="space-y-2.5 border-t border-border/60 pt-4 text-sm text-muted-foreground">
-              <p className="font-bold text-foreground">Contact Us</p>
-              <div className="flex items-center gap-2">
+            <p className="font-bold">Contact Us</p>
+            <div className="space-y-2.5 text-sm text-muted-foreground">
+              <a href="mailto:support@northstar.com" className="flex items-center gap-2 transition-colors hover:text-primary">
                 <Mail className="h-3.5 w-3.5 shrink-0 text-primary" />
                 <span>support@northstar.com</span>
-              </div>
-              <div className="flex items-center gap-2">
+              </a>
+              <a href="tel:+18001234567" className="flex items-center gap-2 transition-colors hover:text-primary">
                 <Phone className="h-3.5 w-3.5 shrink-0 text-primary" />
                 <span>+1 (800) 123-4567</span>
-              </div>
+              </a>
               <div className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
                 <span>Mon – Fri, 9am – 6pm EST</span>

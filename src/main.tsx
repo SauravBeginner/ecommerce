@@ -6,11 +6,17 @@ import { AuthProvider } from "./store/auth";
 import { StorefrontProvider } from "./store/storefront";
 import "./index.css";
 
+// Don't let the browser restore the previous scroll position on refresh / back-forward.
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
+}
+
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, search, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) return; // let in-page anchors (#categories etc.) do their thing
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [pathname, search, hash]);
   return null;
 }
 

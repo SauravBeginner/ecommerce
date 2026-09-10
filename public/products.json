@@ -39,7 +39,8 @@
       "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 2,
@@ -73,7 +74,8 @@
       "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 3,
@@ -109,7 +111,8 @@
       "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 4,
@@ -145,7 +148,8 @@
       "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 5,
@@ -187,7 +191,8 @@
       "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 6,
@@ -224,7 +229,8 @@
       "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 7,
@@ -266,7 +272,8 @@
       "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 8,
@@ -302,7 +309,8 @@
       "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 9,
@@ -337,7 +345,8 @@
       "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 10,
@@ -372,7 +381,8 @@
       "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 11,
@@ -410,7 +420,8 @@
       "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 12,
@@ -447,7 +458,8 @@
       "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "originalPrice": 348
+    "originalPrice": 348,
+    "gender": "men"
   },
   {
     "id": 13,
@@ -489,7 +501,8 @@
       "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "originalPrice": 100
+    "originalPrice": 100,
+    "gender": "women"
   },
   {
     "id": 14,
@@ -525,7 +538,8 @@
       "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 15,
@@ -561,7 +575,8 @@
       "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 16,
@@ -596,7 +611,8 @@
       "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 17,
@@ -636,7 +652,8 @@
       "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 18,
@@ -672,7 +689,8 @@
       "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 19,
@@ -712,7 +730,8 @@
       "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 20,
@@ -748,7 +767,8 @@
       "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "women"
   },
   {
     "id": 21,
@@ -782,7 +802,8 @@
       "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 22,
@@ -819,7 +840,8 @@
     ],
     "isNew": false,
     "originalPrice": 216,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "unisex"
   },
   {
     "id": 23,
@@ -857,7 +879,8 @@
       "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 24,
@@ -892,7 +915,8 @@
       "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 25,
@@ -932,7 +956,8 @@
       "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 26,
@@ -968,7 +993,8 @@
     ],
     "isNew": false,
     "originalPrice": 206,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "women"
   },
   {
     "id": 27,
@@ -1003,7 +1029,8 @@
       "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 28,
@@ -1038,7 +1065,8 @@
       "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 29,
@@ -1077,7 +1105,8 @@
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 30,
@@ -1114,7 +1143,8 @@
       "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 31,
@@ -1154,7 +1184,8 @@
       "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 32,
@@ -1189,7 +1220,8 @@
       "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 33,
@@ -1223,7 +1255,8 @@
       "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 34,
@@ -1257,7 +1290,8 @@
       "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 35,
@@ -1298,7 +1332,8 @@
       "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "women"
   },
   {
     "id": 36,
@@ -1333,7 +1368,8 @@
       "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 37,
@@ -1375,7 +1411,8 @@
       "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "men"
   },
   {
     "id": 38,
@@ -1410,7 +1447,8 @@
       "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 39,
@@ -1444,7 +1482,8 @@
       "https://images.unsplash.com/photo-1608156639585-b3a032ef9689?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1608156639585-b3a032ef9689?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 40,
@@ -1478,7 +1517,8 @@
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 41,
@@ -1518,7 +1558,8 @@
       "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 42,
@@ -1555,7 +1596,8 @@
       "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "men"
   },
   {
     "id": 43,
@@ -1595,7 +1637,8 @@
       "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 44,
@@ -1631,7 +1674,8 @@
       "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "originalPrice": 249
+    "originalPrice": 249,
+    "gender": "women"
   },
   {
     "id": 45,
@@ -1667,7 +1711,8 @@
       "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "unisex"
   },
   {
     "id": 46,
@@ -1701,7 +1746,8 @@
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 47,
@@ -1739,7 +1785,8 @@
       "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 48,
@@ -1774,7 +1821,8 @@
       "https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 49,
@@ -1816,7 +1864,8 @@
     ],
     "isNew": false,
     "originalPrice": 104,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "men"
   },
   {
     "id": 50,
@@ -1851,7 +1900,8 @@
       "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 51,
@@ -1887,7 +1937,8 @@
     ],
     "isNew": false,
     "originalPrice": 256,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "women"
   },
   {
     "id": 52,
@@ -1924,7 +1975,8 @@
       "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "unisex"
   },
   {
     "id": 53,
@@ -1963,7 +2015,8 @@
       "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 54,
@@ -1999,7 +2052,8 @@
       "https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "men"
   },
   {
     "id": 55,
@@ -2039,7 +2093,8 @@
       "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 56,
@@ -2073,7 +2128,8 @@
       "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "women"
   },
   {
     "id": 57,
@@ -2108,7 +2164,8 @@
       "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": false
+    "isNew": false,
+    "gender": "unisex"
   },
   {
     "id": 58,
@@ -2145,7 +2202,8 @@
     ],
     "isNew": false,
     "originalPrice": 154,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "unisex"
   },
   {
     "id": 59,
@@ -2185,7 +2243,8 @@
     ],
     "isNew": false,
     "originalPrice": 242,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "women"
   },
   {
     "id": 60,
@@ -2222,7 +2281,8 @@
       "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": false,
-    "badge": "Sale"
+    "badge": "Sale",
+    "gender": "men"
   },
   {
     "id": 61,
@@ -2263,7 +2323,8 @@
       "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": true,
-    "badge": "New"
+    "badge": "New",
+    "gender": "men"
   },
   {
     "id": 62,
@@ -2298,7 +2359,8 @@
       "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": true,
-    "badge": "New"
+    "badge": "New",
+    "gender": "women"
   },
   {
     "id": 63,
@@ -2334,7 +2396,8 @@
       "https://images.unsplash.com/photo-1598331668826-20cecc596b86?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1598331668826-20cecc596b86?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": true
+    "isNew": true,
+    "gender": "unisex"
   },
   {
     "id": 64,
@@ -2369,7 +2432,8 @@
       "https://images.unsplash.com/photo-1586210579191-33b45e38fa2c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": true,
-    "badge": "New"
+    "badge": "New",
+    "gender": "unisex"
   },
   {
     "id": 65,
@@ -2409,7 +2473,8 @@
       "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": true
+    "isNew": true,
+    "gender": "men"
   },
   {
     "id": 66,
@@ -2445,7 +2510,8 @@
       "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": true,
-    "badge": "New"
+    "badge": "New",
+    "gender": "women"
   },
   {
     "id": 67,
@@ -2486,7 +2552,8 @@
       "https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": true,
-    "badge": "New"
+    "badge": "New",
+    "gender": "men"
   },
   {
     "id": 68,
@@ -2521,7 +2588,8 @@
       "https://images.unsplash.com/photo-1575032617751-6ddec2089882?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1575032617751-6ddec2089882?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": true
+    "isNew": true,
+    "gender": "women"
   },
   {
     "id": 69,
@@ -2556,7 +2624,8 @@
       "https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": true,
-    "badge": "New"
+    "badge": "New",
+    "gender": "unisex"
   },
   {
     "id": 70,
@@ -2591,7 +2660,8 @@
       "https://images.unsplash.com/photo-1629429407756-446d66f5b24e?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
     "isNew": true,
-    "badge": "New"
+    "badge": "New",
+    "gender": "unisex"
   },
   {
     "id": 71,
@@ -2631,7 +2701,8 @@
       "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": true
+    "isNew": true,
+    "gender": "women"
   },
   {
     "id": 72,
@@ -2668,6 +2739,7 @@
       "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
       "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
     ],
-    "isNew": true
+    "isNew": true,
+    "gender": "men"
   }
 ]

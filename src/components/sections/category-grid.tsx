@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const categories = [
+export const categories = [
   {
     name: "Apparel",
     sub: "Knits & layers",

@@ -10,7 +10,7 @@ const slides = [
     title: "Timeless",
     accent: "Elegance",
     text: "Minimal designs. Maximum impact. Redefine your everyday with apparel, audio, and desk pieces that speak sophistication.",
-    cta: { label: "Explore collection", to: "/shop" },
+    cta: { label: "Shop women", to: "/shop?for=women" },
     image: "https://images.unsplash.com/photo-1571513722275-4b41940f54b8?auto=format&fit=crop&w=1000&q=85",
   },
   {
@@ -18,7 +18,7 @@ const slides = [
     title: "Tailored",
     accent: "Comfort",
     text: "Blazers, knits and clean sneakers in warm neutrals. Sharp enough for the office, easy enough for the weekend.",
-    cta: { label: "Shop apparel", to: "/shop?category=Apparel" },
+    cta: { label: "Shop men", to: "/shop?for=men" },
     image: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1000&q=85",
   },
   {

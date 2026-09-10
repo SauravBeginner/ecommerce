@@ -1,5 +1,5 @@
 import { ArrowUpDown, ChevronDown } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ProductFilters, type FilterState } from "@/components/store/product-filters";
 import { ProductCard } from "@/components/store/product-card";
@@ -23,35 +23,42 @@ const sortOptions = [
   { value: "rating", label: "Top rated" },
 ];
 
-const defaultFilters: FilterState = { search: "", category: "All", price: "all", sort: "featured", sale: false, newOnly: false };
+const defaultFilters: FilterState = { search: "", category: "All", price: "all", sort: "featured", sale: false, newOnly: false, gender: "all" };
+
+const genderFromParam = (value: string | null): FilterState["gender"] =>
+  value === "women" || value === "men" || value === "unisex" ? value : "all";
+
+function filtersFromParams(params: URLSearchParams): FilterState {
+  return {
+    search: params.get("q") ?? "",
+    category: params.get("category") ?? "All",
+    price: params.get("price") ?? "all",
+    sort: params.get("sort") ?? "featured",
+    sale: params.get("sale") === "true",
+    newOnly: params.get("new") === "true" && params.get("sale") !== "true",
+    gender: genderFromParam(params.get("for")),
+  };
+}
+
+function paramsFromFilters(filters: FilterState): URLSearchParams {
+  const params = new URLSearchParams();
+  if (filters.search) params.set("q", filters.search);
+  if (filters.category !== "All") params.set("category", filters.category);
+  if (filters.price !== "all") params.set("price", filters.price);
+  if (filters.sort !== "featured") params.set("sort", filters.sort);
+  if (filters.sale) params.set("sale", "true");
+  if (filters.newOnly) params.set("new", "true");
+  if (filters.gender !== "all") params.set("for", filters.gender);
+  return params;
+}
 
 export function ShopPage() {
   const { products } = useStorefront();
-  const [searchParams] = useSearchParams();
-  const [filters, setFilters] = useState<FilterState>({
-    ...defaultFilters,
-    search: searchParams.get("q") ?? "",
-    category: searchParams.get("category") ?? "All",
-    sort: searchParams.get("sort") ?? "featured",
-    sale: searchParams.get("sale") === "true",
-    newOnly: searchParams.get("new") === "true",
-  });
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  useEffect(() => {
-    const category = searchParams.get("category");
-    const sort = searchParams.get("sort");
-    const sale = searchParams.get("sale") === "true";
-    const q = searchParams.get("q");
-    const newOnly = searchParams.get("new") === "true";
-    setFilters((f) => ({
-      ...f,
-      ...(category ? { category } : {}),
-      ...(sort ? { sort } : {}),
-      ...(q !== null ? { search: q } : {}),
-      sale,
-      newOnly,
-    }));
-  }, [searchParams]);
+  // The URL is the single source of truth: sidebar changes write to it, and it drives the filters.
+  const filters = useMemo(() => filtersFromParams(searchParams), [searchParams]);
+  const setFilters = (next: FilterState) => setSearchParams(paramsFromFilters(next), { replace: true });
 
   const categories = [...new Set(products.map((product) => product.category))];
   const counts = useMemo(
@@ -78,8 +85,9 @@ export function ShopPage() {
 
       const matchesSale = !filters.sale || Boolean(product.originalPrice);
       const matchesNew = !filters.newOnly || Boolean(product.isNew);
+      const matchesGender = filters.gender === "all" || product.gender === filters.gender;
 
-      return matchesSearch && matchesCategory && matchesSale && matchesNew && matchesPrice(filters.price, product.price);
+      return matchesSearch && matchesCategory && matchesSale && matchesNew && matchesGender && matchesPrice(filters.price, product.price);
     });
 
     if (filters.sort === "price-low") return [...result].sort((a, b) => a.price - b.price);
@@ -87,17 +95,31 @@ export function ShopPage() {
     if (filters.sort === "rating") return [...result].sort((a, b) => b.rating - a.rating);
     if (filters.sort === "new") return [...result].sort((a, b) => b.id - a.id);
     return result;
-  }, [filters.category, filters.price, filters.sort, filters.sale, filters.newOnly, debouncedSearch, products]);
+  }, [filters.category, filters.price, filters.sort, filters.sale, filters.newOnly, filters.gender, debouncedSearch, products]);
 
   return (
     <>
       <PageHero
         eyebrow="Shop"
-        title={filters.search ? `Results for “${filters.search}”` : filters.sale ? "Sale" : filters.newOnly ? "New in" : filters.category === "All" ? "All products" : filters.category}
-        description={filters.sale ? "Limited-time prices across the edit." : filters.newOnly ? "The latest arrivals, fresh this season." : "Find the right essentials by category, price, and rating."}
+        title={
+          filters.search
+            ? `Results for “${filters.search}”`
+            : filters.sale
+              ? "Sale"
+              : filters.newOnly
+                ? "New in"
+                : filters.gender !== "all" && filters.category === "All"
+                  ? filters.gender === "women" ? "Women" : filters.gender === "men" ? "Men" : "Unisex"
+                  : filters.category === "All"
+                    ? "All products"
+                    : filters.gender !== "all"
+                      ? `${filters.gender === "women" ? "Women's" : filters.gender === "men" ? "Men's" : "Unisex"} ${filters.category.toLowerCase()}`
+                      : filters.category
+        }
+        description={filters.sale ? "Limited-time prices across the edit." : filters.newOnly ? "The latest arrivals, fresh this season." : filters.gender === "women" ? "Apparel, footwear, bags and watches for her." : filters.gender === "men" ? "Apparel, footwear, carry goods and watches for him." : "Find the right essentials by category, price, and rating."}
       />
       <section className="pb-16 pt-8 sm:pb-20">
-        <div className="container grid gap-8 lg:grid-cols-[260px_1fr]">
+        <div className="container grid gap-8 lg:grid-cols-[260px_1fr] [&>*]:min-w-0">
           <ProductFilters
             filters={filters}
             categories={categories}

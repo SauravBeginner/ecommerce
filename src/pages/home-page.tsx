@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { BrandStrip } from "@/components/sections/brand-strip";
 import { CategoryGrid } from "@/components/sections/category-grid";
 import { PromoBanners } from "@/components/sections/promo-banners";
+import { ShopFor } from "@/components/sections/shop-for";
 import { Hero } from "@/components/sections/hero";
 import { Newsletter } from "@/components/sections/newsletter";
 import { ProductGrid } from "@/components/sections/product-grid";
@@ -16,6 +17,7 @@ export function HomePage() {
     <>
       <Hero />
       <ValueProps />
+      <ShopFor />
       <CategoryGrid />
       <PromoBanners />
       <ProductGrid

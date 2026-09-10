@@ -10,6 +10,7 @@ export type FilterState = {
   sort: string;
   sale: boolean;
   newOnly: boolean;
+  gender: "all" | "women" | "men" | "unisex";
 };
 
 type ProductFiltersProps = {
@@ -37,7 +38,7 @@ export function ProductFilters({
   onReset,
 }: ProductFiltersProps) {
   const isDirty =
-    filters.search !== "" || filters.category !== "All" || filters.price !== "all" || filters.sale || filters.newOnly;
+    filters.search !== "" || filters.category !== "All" || filters.price !== "all" || filters.sale || filters.newOnly || filters.gender !== "all";
 
   const setSearch = (event: ChangeEvent<HTMLInputElement>) =>
     onChange({ ...filters, search: event.target.value });
@@ -45,7 +46,7 @@ export function ProductFilters({
   const categoryRows = [{ name: "All", count: total }, ...categories.map((name) => ({ name, count: counts[name] ?? 0 }))];
 
   return (
-    <aside className="space-y-7 lg:sticky lg:top-24">
+    <aside className="min-w-0 space-y-7 lg:sticky lg:top-24">
       {/* Search */}
       <div className="relative">
         <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
@@ -55,6 +56,26 @@ export function ProductFilters({
           placeholder="Search products"
           className="h-11 rounded-full border-border bg-card pl-11 text-sm shadow-soft"
         />
+      </div>
+
+      {/* Shop for */}
+      <div>
+        <h3 className="mb-3 font-display text-lg">Shop for</h3>
+        <div className="grid grid-cols-4 gap-1 rounded-full border border-border bg-card p-1 text-xs font-semibold">
+          {(["all", "women", "men", "unisex"] as const).map((value) => (
+            <button
+              key={value}
+              type="button"
+              onClick={() => onChange({ ...filters, gender: value })}
+              className={cn(
+                "rounded-full py-1.5 capitalize transition",
+                filters.gender === value ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground",
+              )}
+            >
+              {value === "all" ? "All" : value}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Categories */}
@@ -72,7 +93,7 @@ export function ProductFilters({
             </button>
           ) : null}
         </div>
-        <ul className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:flex-col lg:gap-1 lg:overflow-visible lg:px-0 lg:pb-0">
+        <ul className="scrollbar-none -mx-1 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:flex-col lg:gap-1 lg:overflow-visible lg:px-0 lg:pb-0">
           {categoryRows.map((row) => {
             const active = filters.category === row.name;
             return (
@@ -134,9 +155,10 @@ export function ProductFilters({
       </div>
 
       {/* New / Sale toggles */}
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
       <button
         type="button"
-        onClick={() => onChange({ ...filters, newOnly: !filters.newOnly })}
+        onClick={() => onChange({ ...filters, newOnly: !filters.newOnly, sale: false })}
         className={cn(
           "flex w-full items-center justify-between rounded-xl border px-4 py-3 text-sm font-semibold transition",
           filters.newOnly ? "border-brand bg-brand/10 text-brand" : "border-border bg-card hover:border-foreground/40",
@@ -149,7 +171,7 @@ export function ProductFilters({
       </button>
       <button
         type="button"
-        onClick={() => onChange({ ...filters, sale: !filters.sale })}
+        onClick={() => onChange({ ...filters, sale: !filters.sale, newOnly: false })}
         className={cn(
           "flex w-full items-center justify-between rounded-xl border px-4 py-3 text-sm font-semibold transition",
           filters.sale ? "border-brand bg-brand/10 text-brand" : "border-border bg-card hover:border-foreground/40",
@@ -160,6 +182,7 @@ export function ProductFilters({
           <span className={cn("block h-4 w-4 rounded-full bg-card transition", filters.sale && "translate-x-4")} />
         </span>
       </button>
+      </div>
 
       {/* Promo tile */}
       <div className="hidden overflow-hidden rounded-2xl bg-foreground p-5 text-background lg:block">

@@ -13,12 +13,27 @@ type HeaderProps = {
   onToggleTheme: () => void;
 };
 
-const navItems = [
-  { label: "Home", to: "/", end: true },
-  { label: "Shop", to: "/shop", end: true },
-  { label: "New in", to: "/shop?new=true" },
-  { label: "Sale", to: "/shop?sale=true", accent: true },
+type NavItem = { label: string; to: string; accent?: boolean; isActive: (path: string, params: URLSearchParams) => boolean };
+
+const onShop = (path: string) => path === "/shop";
+
+const navItems: NavItem[] = [
+  { label: "Home", to: "/", isActive: (path) => path === "/" },
+  // "Shop" is the catch-all: lit on any shop view that isn't claimed by a more specific link
+  { label: "Shop", to: "/shop", isActive: (path, p) => onShop(path) && p.get("new") !== "true" && p.get("sale") !== "true" },
+  { label: "New in", to: "/shop?new=true", isActive: (path, p) => onShop(path) && p.get("new") === "true" },
+  { label: "Sale", to: "/shop?sale=true", accent: true, isActive: (path, p) => onShop(path) && p.get("sale") === "true" },
+  { label: "Contact", to: "/contact", isActive: (path) => path === "/contact" },
 ];
+
+const linkClass = (active: boolean, accent?: boolean) =>
+  cn(
+    "relative whitespace-nowrap py-1 text-sm font-medium transition-colors hover:text-foreground",
+    active ? "text-foreground" : "text-muted-foreground",
+    accent && "text-brand hover:text-brand",
+    "after:absolute after:-bottom-0.5 after:left-0 after:h-px after:bg-brand after:transition-all after:duration-300",
+    active ? "after:w-full" : "after:w-0 hover:after:w-full",
+  );
 
 function CountBubble({ count }: { count: number }) {
   if (count <= 0) return null;
@@ -35,22 +50,28 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
   const { user } = useAuth();
   const location = useLocation();
   const initials = user ? user.name.split(" ").map((part) => part[0]).join("").slice(0, 2).toUpperCase() : "";
-  const currentPath = `${location.pathname}${location.search}`;
+  const params = new URLSearchParams(location.search);
 
   useEffect(() => {
     setOpen(false);
     setSearchOpen(false);
   }, [location]);
 
-  const isActive = (item: (typeof navItems)[number]) =>
-    item.end ? location.pathname === item.to && !location.search : currentPath === item.to;
+  // Exactly one link is highlighted. When filters overlap (e.g. men + sale), the more specific
+  // campaign section wins: Sale > New in > Women / Men > Shop.
+  const priority = ["Sale", "New in", "Shop", "Home", "Contact"];
+  const activeLabel = priority.find((label) => {
+    const item = navItems.find((entry) => entry.label === label);
+    return item?.isActive(location.pathname, params);
+  });
+  const isActive = (item: NavItem) => item.label === activeLabel;
 
   const iconButton =
     "relative flex h-10 w-10 items-center justify-center rounded-full text-foreground transition hover:bg-accent/70";
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/70 bg-background/90 backdrop-blur-xl">
-      <div className="container flex h-[68px] items-center justify-between gap-6">
+      <div className="container flex h-[68px] items-center justify-between gap-4 lg:gap-6">
         {/* Wordmark */}
         <Link to="/" className="flex items-baseline gap-0.5 font-display text-2xl tracking-tight text-foreground">
           Northstar
@@ -58,21 +79,11 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-5 md:flex lg:gap-8">
           {navItems.map((item) => {
             const active = isActive(item);
             return (
-              <NavLink
-                key={item.label}
-                to={item.to}
-                className={cn(
-                  "relative py-1 text-sm font-medium transition-colors hover:text-foreground",
-                  active ? "text-foreground" : "text-muted-foreground",
-                  item.accent && "text-brand hover:text-brand",
-                  "after:absolute after:-bottom-0.5 after:left-0 after:h-px after:bg-brand after:transition-all after:duration-300",
-                  active ? "after:w-full" : "after:w-0 hover:after:w-full",
-                )}
-              >
+              <NavLink key={item.label} to={item.to} className={linkClass(active, item.accent)}>
                 {item.label}
               </NavLink>
             );
@@ -80,19 +91,19 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0.5 sm:gap-1">
           <button type="button" className={iconButton} aria-label="Search products" onClick={() => setSearchOpen(true)}>
             <Search className="h-[18px] w-[18px]" strokeWidth={1.8} />
           </button>
           <button
             type="button"
-            className={iconButton}
+            className={cn(iconButton, "hidden sm:flex")}
             onClick={onToggleTheme}
             aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
           >
             {theme === "dark" ? <Sun className="h-[18px] w-[18px]" strokeWidth={1.8} /> : <Moon className="h-[18px] w-[18px]" strokeWidth={1.8} />}
           </button>
-          <Link to="/wishlist" className={iconButton} aria-label="Wishlist">
+          <Link to="/wishlist" className={cn(iconButton, "hidden sm:flex")} aria-label="Wishlist">
             <Heart className="h-[18px] w-[18px]" strokeWidth={1.8} />
             <CountBubble count={wishlistCount} />
           </Link>
@@ -109,12 +120,17 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
               {initials}
             </Link>
           ) : (
-            <Button asChild size="sm" className="ml-2 hidden rounded-full px-5 md:inline-flex">
-              <Link to="/login">
-                <UserRound className="h-4 w-4" strokeWidth={2} />
-                Sign in
+            <>
+              <Link to="/login" className={cn(iconButton, "lg:hidden")} aria-label="Sign in">
+                <UserRound className="h-[18px] w-[18px]" strokeWidth={1.8} />
               </Link>
-            </Button>
+              <Button asChild size="sm" className="ml-2 hidden rounded-full px-5 lg:inline-flex">
+                <Link to="/login">
+                  <UserRound className="h-4 w-4" strokeWidth={2} />
+                  Sign in
+                </Link>
+              </Button>
+            </>
           )}
           <button
             type="button"
@@ -138,18 +154,28 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
         <div className="min-h-0">
           <nav className="container flex flex-col py-3">
             {navItems.map((item) => (
-              <NavLink
-                key={item.label}
-                to={item.to}
-                className={cn(
-                  "flex items-center justify-between border-b border-border/60 py-3 font-display text-xl last:border-b-0",
-                  item.accent ? "text-brand" : "text-foreground",
-                )}
-              >
-                {item.label}
-                <span className="text-sm text-muted-foreground">→</span>
-              </NavLink>
+                <NavLink
+                  key={item.label}
+                  to={item.to}
+                  className={cn(
+                    "flex items-center justify-between border-b border-border/60 py-3 font-display text-xl last:border-b-0",
+                    item.accent ? "text-brand" : "text-foreground",
+                  )}
+                >
+                  {item.label}
+                  <span className="text-sm text-muted-foreground">→</span>
+                </NavLink>
             ))}
+            <div className="mt-3 grid grid-cols-2 gap-2 sm:hidden">
+              <Link to="/wishlist" className="flex items-center justify-center gap-2 rounded-full border border-border bg-card py-2.5 text-sm font-semibold">
+                <Heart className="h-4 w-4" strokeWidth={1.8} />
+                Wishlist{wishlistCount > 0 ? ` (${wishlistCount})` : ""}
+              </Link>
+              <button type="button" onClick={onToggleTheme} className="flex items-center justify-center gap-2 rounded-full border border-border bg-card py-2.5 text-sm font-semibold">
+                {theme === "dark" ? <Sun className="h-4 w-4" strokeWidth={1.8} /> : <Moon className="h-4 w-4" strokeWidth={1.8} />}
+                {theme === "dark" ? "Light mode" : "Dark mode"}
+              </button>
+            </div>
             <Button asChild className="mt-3 rounded-full">
               <Link to="/shop">Shop now</Link>
             </Button>

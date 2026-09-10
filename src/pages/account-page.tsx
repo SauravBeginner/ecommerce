@@ -46,7 +46,7 @@ export function AccountLayout() {
         </div>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-[240px_1fr]">
-          <nav className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 lg:mx-0 lg:flex-col lg:gap-1 lg:overflow-visible lg:px-0">
+          <nav className="scrollbar-none -mx-1 flex gap-2 overflow-x-auto px-1 pb-1 lg:mx-0 lg:flex-col lg:gap-1 lg:overflow-visible lg:px-0">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (

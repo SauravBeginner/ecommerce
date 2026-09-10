@@ -128,6 +128,7 @@ export function ProductDetailsPage() {
           </div>
           <div className="flex flex-col gap-6">
             <div className="flex flex-wrap items-center gap-2">
+              {product.gender ? <Badge variant="outline" className="capitalize">{product.gender}</Badge> : null}
               {product.badge ? <Badge className="uppercase tracking-wide">{product.badge}</Badge> : null}
               {discount ? <Badge>-{discount}% off</Badge> : null}
               <div className="flex items-center gap-1.5 text-sm text-brand">

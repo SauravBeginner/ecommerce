@@ -50,7 +50,7 @@ export function OrderPage() {
               {placed.toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" })} · confirmation sent to {user.email}
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             <Button asChild variant="outline" className="rounded-full">
               <Link to="/account/orders">
                 <Package className="h-4 w-4" />
@@ -80,11 +80,11 @@ export function OrderPage() {
                 {order.items.map((item) => (
                   <li key={item.productId} className="flex items-center gap-4 py-4">
                     <Link to={`/product/${item.slug}`} className="shrink-0 overflow-hidden rounded-xl bg-accent/40">
-                      <img src={item.image} alt="" className="h-20 w-20 object-cover" />
+                      <img src={item.image} alt="" className="h-16 w-16 object-cover sm:h-20 sm:w-20" />
                     </Link>
                     <div className="min-w-0 flex-1">
                       <Link to={`/product/${item.slug}`} className="font-semibold hover:text-brand">{item.name}</Link>
-                      <p className="mt-0.5 text-sm text-muted-foreground">{money(item.price)} × {item.quantity}</p>
+                      <p className="mt-0.5 whitespace-nowrap text-sm text-muted-foreground">{money(item.price)} × {item.quantity}</p>
                     </div>
                     <span className="font-bold">{money(item.price * item.quantity)}</span>
                   </li>
