@@ -121,17 +121,12 @@ export function Header({ cartCount, wishlistCount, theme, onToggleTheme }: Heade
               {initials}
             </Link>
           ) : (
-            <>
-              <Link to="/login" className={cn(iconButton, "lg:hidden")} aria-label="Sign in">
-                <UserRound className="h-[18px] w-[18px]" strokeWidth={1.8} />
+            <Button asChild size="sm" className="ml-1 hidden rounded-full px-4 md:inline-flex lg:ml-2 lg:px-5">
+              <Link to="/login">
+                <UserRound className="hidden h-4 w-4 lg:block" strokeWidth={2} />
+                Sign in
               </Link>
-              <Button asChild size="sm" className="ml-2 hidden rounded-full px-5 lg:inline-flex">
-                <Link to="/login">
-                  <UserRound className="h-4 w-4" strokeWidth={2} />
-                  Sign in
-                </Link>
-              </Button>
-            </>
+            </Button>
           )}
           <button
             type="button"
