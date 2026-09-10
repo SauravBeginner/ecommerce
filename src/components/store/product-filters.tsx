@@ -46,7 +46,25 @@ export function ProductFilters({
   const categoryRows = [{ name: "All", count: total }, ...categories.map((name) => ({ name, count: counts[name] ?? 0 }))];
 
   return (
-    <aside className="min-w-0 space-y-7 lg:sticky lg:top-24">
+    <aside className="min-w-0 space-y-6 lg:sticky lg:top-24">
+      <div className="flex items-center justify-between">
+        <h2 className="font-display text-2xl">Filters</h2>
+        <button
+          type="button"
+          onClick={onReset}
+          disabled={!isDirty}
+          className={cn(
+            "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold transition",
+            isDirty
+              ? "border-brand/40 text-brand hover:bg-brand/10"
+              : "cursor-default border-border text-muted-foreground/60",
+          )}
+        >
+          <RotateCcw className="h-3 w-3" />
+          Reset all
+        </button>
+      </div>
+
       {/* Search */}
       <div className="relative">
         <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
@@ -80,19 +98,7 @@ export function ProductFilters({
 
       {/* Categories */}
       <div>
-        <div className="mb-3 flex items-center justify-between">
-          <h3 className="font-display text-lg">Categories</h3>
-          {isDirty ? (
-            <button
-              type="button"
-              onClick={onReset}
-              className="inline-flex items-center gap-1 text-xs font-semibold text-brand hover:underline"
-            >
-              <RotateCcw className="h-3 w-3" />
-              Reset
-            </button>
-          ) : null}
-        </div>
+        <h3 className="mb-3 font-display text-lg">Categories</h3>
         <ul className="scrollbar-none -mx-1 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:flex-col lg:gap-1 lg:overflow-visible lg:px-0 lg:pb-0">
           {categoryRows.map((row) => {
             const active = filters.category === row.name;

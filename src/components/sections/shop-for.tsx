@@ -23,8 +23,8 @@ const audiences = [
     title: "The kids' edit",
     text: "Play-proof tees, denim, sneakers and gadgets.",
     to: "/shop?for=kids",
-    position: "center 25%",
-    image: "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?auto=format&fit=crop&w=1200&q=80",
+    position: "center 30%",
+    image: "https://plus.unsplash.com/premium_photo-1723773698711-50ffbe19b222?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
