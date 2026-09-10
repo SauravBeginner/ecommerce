@@ -1,100 +1,160 @@
 import type { ChangeEvent } from "react";
-import { ChevronDown, RotateCcw, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Check, RotateCcw, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 
 export type FilterState = {
   search: string;
   category: string;
   price: string;
   sort: string;
+  sale: boolean;
 };
 
 type ProductFiltersProps = {
   filters: FilterState;
   categories: string[];
+  counts: Record<string, number>;
+  total: number;
   onChange: (next: FilterState) => void;
   onReset: () => void;
 };
 
-const selectClass =
-  "w-full appearance-none rounded-md border border-input bg-background px-3 py-2 pr-8 text-sm outline-none ring-ring focus:ring-2 cursor-pointer";
+const priceOptions = [
+  { value: "all", label: "All" },
+  { value: "under-100", label: "Under $100" },
+  { value: "100-150", label: "$100 – $150" },
+  { value: "150-plus", label: "$150+" },
+];
 
 export function ProductFilters({
   filters,
   categories,
+  counts,
+  total,
   onChange,
   onReset,
 }: ProductFiltersProps) {
-  const updateField =
-    (field: keyof FilterState) =>
-    (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-      onChange({ ...filters, [field]: event.target.value });
-    };
+  const isDirty =
+    filters.search !== "" || filters.category !== "All" || filters.price !== "all" || filters.sale;
+
+  const setSearch = (event: ChangeEvent<HTMLInputElement>) =>
+    onChange({ ...filters, search: event.target.value });
+
+  const categoryRows = [{ name: "All", count: total }, ...categories.map((name) => ({ name, count: counts[name] ?? 0 }))];
 
   return (
-    <Card className="lg:sticky lg:top-24">
-      <CardContent className="space-y-4 p-4">
-        <p className="font-semibold">Search and filter</p>
+    <aside className="space-y-7 lg:sticky lg:top-24">
+      {/* Search */}
+      <div className="relative">
+        <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+        <Input
+          value={filters.search}
+          onChange={setSearch}
+          placeholder="Search products"
+          className="h-11 rounded-full border-border bg-card pl-11 text-sm shadow-soft"
+        />
+      </div>
 
-        <label className="block space-y-1.5">
-          <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Search</span>
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
-            <Input
-              value={filters.search}
-              onChange={updateField("search")}
-              placeholder="Search products"
-              className="h-9 pl-9 text-sm"
-            />
-          </div>
-        </label>
+      {/* Categories */}
+      <div>
+        <div className="mb-3 flex items-center justify-between">
+          <h3 className="font-display text-lg">Categories</h3>
+          {isDirty ? (
+            <button
+              type="button"
+              onClick={onReset}
+              className="inline-flex items-center gap-1 text-xs font-semibold text-brand hover:underline"
+            >
+              <RotateCcw className="h-3 w-3" />
+              Reset
+            </button>
+          ) : null}
+        </div>
+        <ul className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:flex-col lg:gap-1 lg:overflow-visible lg:px-0 lg:pb-0">
+          {categoryRows.map((row) => {
+            const active = filters.category === row.name;
+            return (
+              <li key={row.name} className="shrink-0">
+                <button
+                  type="button"
+                  onClick={() => onChange({ ...filters, category: row.name })}
+                  className={cn(
+                    "flex w-full items-center justify-between gap-4 rounded-full px-4 py-2 text-sm transition lg:rounded-lg lg:px-3",
+                    active
+                      ? "bg-foreground text-background"
+                      : "bg-card text-foreground hover:bg-accent/60 lg:bg-transparent",
+                  )}
+                >
+                  <span className="flex items-center gap-2">
+                    <span
+                      className={cn(
+                        "hidden h-4 w-4 items-center justify-center rounded-full border lg:flex",
+                        active ? "border-background bg-brand text-brand-foreground" : "border-border",
+                      )}
+                    >
+                      {active ? <Check className="h-2.5 w-2.5" strokeWidth={3} /> : null}
+                    </span>
+                    {row.name === "All" ? "All products" : row.name}
+                  </span>
+                  <span className={cn("text-xs", active ? "text-background/70" : "text-muted-foreground")}>
+                    {row.count}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
 
-        <label className="block space-y-1.5">
-          <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Category</span>
-          <div className="relative">
-            <select value={filters.category} onChange={updateField("category")} className={selectClass}>
-              <option value="All">All categories</option>
-              {categories.map((category) => (
-                <option key={category} value={category}>{category}</option>
-              ))}
-            </select>
-            <ChevronDown className="pointer-events-none absolute right-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
-          </div>
-        </label>
+      {/* Price */}
+      <div>
+        <h3 className="mb-3 font-display text-lg">Price</h3>
+        <div className="flex flex-wrap gap-2">
+          {priceOptions.map((option) => {
+            const active = filters.price === option.value;
+            return (
+              <button
+                key={option.value}
+                type="button"
+                onClick={() => onChange({ ...filters, price: option.value })}
+                className={cn(
+                  "rounded-full border px-3.5 py-1.5 text-xs font-semibold transition",
+                  active
+                    ? "border-brand bg-brand text-brand-foreground"
+                    : "border-border bg-card text-foreground hover:border-foreground/40",
+                )}
+              >
+                {option.label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
 
-        <label className="block space-y-1.5">
-          <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Price range</span>
-          <div className="relative">
-            <select value={filters.price} onChange={updateField("price")} className={selectClass}>
-              <option value="all">All prices</option>
-              <option value="under-100">Under $100</option>
-              <option value="100-150">$100 to $150</option>
-              <option value="150-plus">$150+</option>
-            </select>
-            <ChevronDown className="pointer-events-none absolute right-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
-          </div>
-        </label>
+      {/* Sale toggle */}
+      <button
+        type="button"
+        onClick={() => onChange({ ...filters, sale: !filters.sale })}
+        className={cn(
+          "flex w-full items-center justify-between rounded-xl border px-4 py-3 text-sm font-semibold transition",
+          filters.sale ? "border-brand bg-brand/10 text-brand" : "border-border bg-card hover:border-foreground/40",
+        )}
+      >
+        On sale only
+        <span className={cn("h-5 w-9 rounded-full p-0.5 transition", filters.sale ? "bg-brand" : "bg-border")}>
+          <span className={cn("block h-4 w-4 rounded-full bg-card transition", filters.sale && "translate-x-4")} />
+        </span>
+      </button>
 
-        <label className="block space-y-1.5">
-          <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Sort by</span>
-          <div className="relative">
-            <select value={filters.sort} onChange={updateField("sort")} className={selectClass}>
-              <option value="featured">Featured</option>
-              <option value="price-low">Price: Low to high</option>
-              <option value="price-high">Price: High to low</option>
-              <option value="rating">Top rated</option>
-            </select>
-            <ChevronDown className="pointer-events-none absolute right-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
-          </div>
-        </label>
-
-        <Button type="button" onClick={onReset} variant="outline" size="sm" className="w-full">
-          <RotateCcw className="h-3.5 w-3.5" />
-          Reset filters
-        </Button>
-      </CardContent>
-    </Card>
+      {/* Promo tile */}
+      <div className="hidden overflow-hidden rounded-2xl bg-foreground p-5 text-background lg:block">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-background/60">Member offer</p>
+        <p className="mt-2 font-display text-2xl leading-tight">10% off your first order</p>
+        <p className="mt-2 text-xs text-background/70">
+          Use code <span className="font-bold text-background">NORTHSTAR10</span> at checkout.
+        </p>
+      </div>
+    </aside>
   );
 }

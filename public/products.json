@@ -5,13 +5,11 @@
     "name": "AeroTrail Sneakers",
     "category": "Footwear",
     "price": 118,
-    "originalPrice": 154,
     "rating": 4.8,
-    "reviews": 214,
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-    "badge": "Best Seller",
+    "reviews": 86,
+    "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80",
     "description": "Featherweight trainers with all-day comfort and a sharp city silhouette.",
-    "longDescription": "AeroTrail blends performance foam, breathable knit construction, and a streamlined profile that works from commute to weekend movement. Designed as a premium everyday sneaker, it balances comfort and visual sharpness for a modern wardrobe.",
+    "longDescription": "Featherweight trainers with all-day comfort and a sharp city silhouette. Built as a premium everyday piece for the Northstar edit, AeroTrail Sneakers balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
     "colors": [
       "Graphite",
       "Clay",
@@ -22,143 +20,627 @@
       "8",
       "9",
       "10",
-      "11"
+      "11",
+      "12"
     ],
     "features": [
-      "Breathable knit upper",
-      "All-day support foam",
-      "City-ready tread pattern"
+      "Padded collar",
+      "Removable insole",
+      "Reflective detailing",
+      "Reinforced heel counter",
+      "Grip rubber outsole",
+      "Breathable knit upper"
     ],
-    "stock": 24
+    "stock": 29,
+    "badge": "Best Seller",
+    "images": [
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
   },
   {
     "id": 2,
-    "slug": "atlas-carry-pack",
-    "name": "Atlas Carry Pack",
+    "slug": "tan-woven-satchel",
+    "name": "Tan Woven Satchel",
     "category": "Accessories",
-    "price": 86,
-    "originalPrice": 110,
-    "rating": 4.7,
-    "reviews": 143,
-    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80",
-    "badge": "New",
-    "description": "Streamlined daily backpack with laptop sleeve and modular storage.",
-    "longDescription": "The Atlas Carry Pack keeps work and weekend essentials in one disciplined silhouette. Padded tech storage, quick-access pockets, and lightweight weather resistance make it an easy everyday companion.",
+    "price": 190,
+    "originalPrice": 242,
+    "rating": 4.6,
+    "reviews": 161,
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=80",
+    "description": "Hand-woven leather satchel with brass clasp and top handle.",
+    "longDescription": "Hand-woven leather satchel with brass clasp and top handle. Built as a premium everyday piece for the Northstar edit, Tan Woven Satchel balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
     "colors": [
-      "Onyx",
-      "Olive",
-      "Stone"
+      "Tan"
     ],
     "sizes": [
-      "18L",
-      "24L"
+      "One size"
     ],
     "features": [
-      "Padded laptop compartment",
-      "Modular front organization",
-      "Water-resistant shell"
+      "Dust bag included",
+      "Lifetime repair",
+      "Adjustable strap",
+      "Water-resistant lining",
+      "Premium hardware",
+      "Full-grain leather"
     ],
-    "stock": 18
+    "stock": 11,
+    "badge": "New",
+    "images": [
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
   },
   {
     "id": 3,
     "slug": "halo-wireless-pro",
     "name": "Halo Wireless Pro",
     "category": "Audio",
-    "price": 149,
-    "originalPrice": 189,
-    "rating": 4.9,
-    "reviews": 389,
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80",
-    "badge": "Hot",
+    "price": 331,
+    "originalPrice": 449,
+    "rating": 4.7,
+    "reviews": 69,
+    "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80",
     "description": "Noise-cancelling headphones with deep focus tuning and long battery life.",
-    "longDescription": "Halo Wireless Pro is tuned for concentration, commute, and cinematic listening. Adaptive noise control, plush ear cushions, and low-latency performance make it a flagship audio pick for this store starter.",
+    "longDescription": "Noise-cancelling headphones with deep focus tuning and long battery life. Built as a premium everyday piece for the Northstar edit, Halo Wireless Pro balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
     "colors": [
-      "Midnight",
-      "Sand"
+      "Black",
+      "Silver"
     ],
     "sizes": [
-      "Standard"
+      "One size"
     ],
     "features": [
-      "Adaptive noise cancellation",
-      "40-hour battery life",
-      "Low-latency wireless mode"
+      "Built-in microphone",
+      "Fast charging",
+      "Bluetooth 5.3",
+      "Carry case included",
+      "Multipoint pairing",
+      "Active noise cancelling"
     ],
-    "stock": 31
+    "stock": 42,
+    "badge": "Hot",
+    "images": [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
   },
   {
     "id": 4,
     "slug": "form-desk-lamp",
     "name": "Form Desk Lamp",
     "category": "Desk Setup",
-    "price": 72,
+    "price": 177,
+    "originalPrice": 246,
     "rating": 4.6,
-    "reviews": 98,
-    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "reviews": 314,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80",
     "description": "Warm ambient lighting designed to clean up your workspace mood instantly.",
-    "longDescription": "Form Desk Lamp delivers soft directional light with a minimal profile that feels intentional on camera and in person. It is a strong accessory choice for productivity-focused setups.",
+    "longDescription": "Warm ambient lighting designed to clean up your workspace mood instantly. Built as a premium everyday piece for the Northstar edit, Form Desk Lamp balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
     "colors": [
-      "Bone",
-      "Slate"
+      "Charcoal",
+      "Sand"
     ],
     "sizes": [
-      "One Size"
+      "One size"
     ],
     "features": [
-      "Warm dimmable glow",
-      "Minimal base footprint",
-      "Focused task lighting"
+      "2-year warranty",
+      "Adjustable angle",
+      "Cable management",
+      "Minimal footprint",
+      "Non-slip base",
+      "USB-C powered"
     ],
-    "stock": 14
+    "stock": 13,
+    "badge": "Limited",
+    "images": [
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
   },
   {
     "id": 5,
-    "slug": "drift-overshirt",
-    "name": "Drift Overshirt",
+    "slug": "essential-crew-tee",
+    "name": "Essential Crew Tee",
     "category": "Apparel",
-    "price": 132,
-    "originalPrice": 168,
-    "rating": 4.8,
-    "reviews": 127,
+    "price": 184,
+    "originalPrice": 249,
+    "rating": 4.6,
+    "reviews": 134,
     "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
-    "badge": "Limited",
-    "description": "Textured overshirt that layers cleanly across warm and cool weather.",
-    "longDescription": "The Drift Overshirt is cut for relaxed structure, giving outfits a premium layer without bulk. It is styled for transitional weather and clean daily wear.",
+    "description": "Heavyweight organic cotton tee with a relaxed, structured drape.",
+    "longDescription": "Heavyweight organic cotton tee with a relaxed, structured drape. Built as a premium everyday piece for the Northstar edit, Essential Crew Tee balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
     "colors": [
-      "Moss",
-      "Sand",
-      "Ink"
+      "White",
+      "Black",
+      "Sand"
     ],
     "sizes": [
+      "XS",
       "S",
       "M",
       "L",
       "XL"
     ],
     "features": [
-      "Structured cotton blend",
-      "Relaxed straight fit",
-      "Easy layering weight"
+      "Ethically produced",
+      "Machine washable",
+      "Organic cotton",
+      "Breathable weave",
+      "Reinforced seams",
+      "Pre-washed for softness"
     ],
-    "stock": 20
+    "stock": 29,
+    "badge": "Popular",
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
   },
   {
     "id": 6,
     "slug": "signal-smartwatch",
     "name": "Signal Smartwatch",
     "category": "Wearables",
-    "price": 174,
-    "originalPrice": 210,
-    "rating": 4.7,
-    "reviews": 265,
+    "price": 168,
+    "rating": 4.4,
+    "reviews": 386,
     "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
-    "badge": "Popular",
     "description": "Fitness, notifications, and minimalist styling in one polished wearable.",
-    "longDescription": "Signal Smartwatch brings fitness tracking and elegant daily alerts into a refined wrist profile. It suits customers who want utility without a bulky tech aesthetic.",
+    "longDescription": "Fitness, notifications, and minimalist styling in one polished wearable. Built as a premium everyday piece for the Northstar edit, Signal Smartwatch balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Silver",
+      "Black"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Sapphire crystal glass",
+      "Heart-rate sensor",
+      "Water resistant to 50m",
+      "2-year warranty",
+      "Wireless charging",
+      "Quick-release strap"
+    ],
+    "stock": 40,
+    "badge": "Best Seller",
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "pastel-court-low",
+    "name": "Pastel Court Low",
+    "category": "Footwear",
+    "price": 132,
+    "rating": 4.5,
+    "reviews": 130,
+    "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80",
+    "description": "Soft-tone leather low-top with cushioned insole for weekend miles.",
+    "longDescription": "Soft-tone leather low-top with cushioned insole for weekend miles. Built as a premium everyday piece for the Northstar edit, Pastel Court Low balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Blush",
+      "Mint",
+      "Sky"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Removable insole",
+      "All-day support foam",
+      "Reflective detailing",
+      "Reinforced heel counter",
+      "Grip rubber outsole",
+      "Padded collar"
+    ],
+    "stock": 21,
+    "badge": "Hot",
+    "images": [
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "wayfarer-shades",
+    "name": "Wayfarer Shades",
+    "category": "Accessories",
+    "price": 62,
+    "rating": 4.7,
+    "reviews": 185,
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=900&q=80",
+    "description": "Classic matte black acetate frames with UV400 lenses.",
+    "longDescription": "Classic matte black acetate frames with UV400 lenses. Built as a premium everyday piece for the Northstar edit, Wayfarer Shades balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
     "colors": [
       "Black",
-      "Silver"
+      "Tortoise"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Adjustable strap",
+      "Premium hardware",
+      "Full-grain leather",
+      "Water-resistant lining",
+      "Interior zip pocket",
+      "Dust bag included"
+    ],
+    "stock": 44,
+    "badge": "Limited",
+    "images": [
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "pulse-studio-wired",
+    "name": "Pulse Studio Wired",
+    "category": "Audio",
+    "price": 85,
+    "originalPrice": 106,
+    "rating": 4.6,
+    "reviews": 380,
+    "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=900&q=80",
+    "description": "Studio-grade wired headphones with 40mm drivers.",
+    "longDescription": "Studio-grade wired headphones with 40mm drivers. Built as a premium everyday piece for the Northstar edit, Pulse Studio Wired balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Custom EQ app",
+      "Carry case included",
+      "Bluetooth 5.3",
+      "Built-in microphone",
+      "Fast charging",
+      "Active noise cancelling"
+    ],
+    "stock": 10,
+    "badge": "Popular",
+    "images": [
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "studio-keyboard",
+    "name": "Studio Keyboard",
+    "category": "Desk Setup",
+    "price": 223,
+    "rating": 4.5,
+    "reviews": 292,
+    "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=900&q=80",
+    "description": "Low-profile wireless keyboard with quiet scissor switches.",
+    "longDescription": "Low-profile wireless keyboard with quiet scissor switches. Built as a premium everyday piece for the Northstar edit, Studio Keyboard balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "White"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Cable management",
+      "Non-slip base",
+      "USB-C powered",
+      "Recycled aluminium",
+      "Adjustable angle",
+      "2-year warranty"
+    ],
+    "stock": 43,
+    "badge": "Best Seller",
+    "images": [
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "fringe-knit-poncho",
+    "name": "Fringe Knit Poncho",
+    "category": "Apparel",
+    "price": 242,
+    "rating": 4.7,
+    "reviews": 71,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80",
+    "description": "Hand-loomed cream poncho with soft fringe hem and V-neck.",
+    "longDescription": "Hand-loomed cream poncho with soft fringe hem and V-neck. Built as a premium everyday piece for the Northstar edit, Fringe Knit Poncho balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Cream"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Reinforced seams",
+      "Organic cotton",
+      "Pre-washed for softness",
+      "Ethically produced",
+      "Breathable weave",
+      "Machine washable"
+    ],
+    "stock": 9,
+    "badge": "New",
+    "images": [
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "heritage-chronograph",
+    "name": "Heritage Chronograph",
+    "category": "Wearables",
+    "price": 278,
+    "rating": 4.5,
+    "reviews": 380,
+    "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=80",
+    "description": "Cream dial chronograph with brown leather strap and sapphire glass.",
+    "longDescription": "Cream dial chronograph with brown leather strap and sapphire glass. Built as a premium everyday piece for the Northstar edit, Heritage Chronograph balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Brown"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Wireless charging",
+      "7-day battery life",
+      "Water resistant to 50m",
+      "Sapphire crystal glass",
+      "Heart-rate sensor",
+      "Quick-release strap"
+    ],
+    "stock": 28,
+    "badge": "Hot",
+    "images": [
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "runner-duo-pack",
+    "name": "Runner Duo Pack",
+    "category": "Footwear",
+    "price": 80,
+    "rating": 4.4,
+    "reviews": 68,
+    "image": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=900&q=80",
+    "description": "Two-pair capsule built for rotation, breathable mesh and grippy sole.",
+    "longDescription": "Two-pair capsule built for rotation, breathable mesh and grippy sole. Built as a premium everyday piece for the Northstar edit, Runner Duo Pack balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Bone",
+      "Coral"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Padded collar",
+      "Reflective detailing",
+      "Reinforced heel counter",
+      "Removable insole",
+      "Breathable knit upper",
+      "Grip rubber outsole"
+    ],
+    "stock": 19,
+    "badge": "Popular",
+    "images": [
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "atlas-carry-pack",
+    "name": "Atlas Carry Pack",
+    "category": "Accessories",
+    "price": 238,
+    "originalPrice": 317,
+    "rating": 4.3,
+    "reviews": 267,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80",
+    "description": "Streamlined daily backpack with laptop sleeve and modular storage.",
+    "longDescription": "Streamlined daily backpack with laptop sleeve and modular storage. Built as a premium everyday piece for the Northstar edit, Atlas Carry Pack balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Navy",
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Water-resistant lining",
+      "Full-grain leather",
+      "Interior zip pocket",
+      "Lifetime repair",
+      "Premium hardware",
+      "Dust bag included"
+    ],
+    "stock": 31,
+    "badge": "Best Seller",
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "onyx-on-ear",
+    "name": "Onyx On-Ear",
+    "category": "Audio",
+    "price": 329,
+    "originalPrice": 389,
+    "rating": 4.5,
+    "reviews": 221,
+    "image": "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&w=900&q=80",
+    "description": "Sleek black on-ear with foldable arms and inline mic.",
+    "longDescription": "Sleek black on-ear with foldable arms and inline mic. Built as a premium everyday piece for the Northstar edit, Onyx On-Ear balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Built-in microphone",
+      "Bluetooth 5.3",
+      "Custom EQ app",
+      "Active noise cancelling",
+      "Carry case included",
+      "Multipoint pairing"
+    ],
+    "stock": 30,
+    "badge": "New",
+    "images": [
+      "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 16,
+    "slug": "glide-wireless-mouse",
+    "name": "Glide Wireless Mouse",
+    "category": "Desk Setup",
+    "price": 87,
+    "originalPrice": 103,
+    "rating": 4.6,
+    "reviews": 339,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=900&q=80",
+    "description": "Ergonomic ambidextrous mouse with silent clicks and 2.4GHz dongle.",
+    "longDescription": "Ergonomic ambidextrous mouse with silent clicks and 2.4GHz dongle. Built as a premium everyday piece for the Northstar edit, Glide Wireless Mouse balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Graphite"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Adjustable angle",
+      "USB-C powered",
+      "Recycled aluminium",
+      "Cable management",
+      "Minimal footprint",
+      "Non-slip base"
+    ],
+    "stock": 17,
+    "badge": "Hot",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 17,
+    "slug": "sage-linen-shirt",
+    "name": "Sage Linen Shirt",
+    "category": "Apparel",
+    "price": 104,
+    "originalPrice": 123,
+    "rating": 4.6,
+    "reviews": 102,
+    "image": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=80",
+    "description": "Breathable linen button-down in muted sage for warm days.",
+    "longDescription": "Breathable linen button-down in muted sage for warm days. Built as a premium everyday piece for the Northstar edit, Sage Linen Shirt balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Sage",
+      "Stone"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Relaxed fit",
+      "Breathable weave",
+      "Machine washable",
+      "Ethically produced",
+      "Reinforced seams",
+      "Organic cotton"
+    ],
+    "stock": 38,
+    "badge": "Limited",
+    "images": [
+      "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 18,
+    "slug": "pulse-smartwatch-sport",
+    "name": "Pulse Smartwatch Sport",
+    "category": "Wearables",
+    "price": 146,
+    "rating": 4.5,
+    "reviews": 91,
+    "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=900&q=80",
+    "description": "Always-on display with GPS, heart rate and 7-day battery.",
+    "longDescription": "Always-on display with GPS, heart rate and 7-day battery. Built as a premium everyday piece for the Northstar edit, Pulse Smartwatch Sport balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
     ],
     "sizes": [
       "40mm",
@@ -166,60 +648,1954 @@
     ],
     "features": [
       "7-day battery life",
-      "Health and movement tracking",
-      "Water resistance"
+      "Sapphire crystal glass",
+      "2-year warranty",
+      "Heart-rate sensor",
+      "Water resistant to 50m",
+      "Wireless charging"
     ],
-    "stock": 16
+    "stock": 36,
+    "badge": "Popular",
+    "images": [
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
   },
   {
-    "id": 7,
-    "slug": "studio-keyboard",
-    "name": "Studio Keyboard",
-    "category": "Desk Setup",
-    "price": 96,
-    "rating": 4.5,
-    "reviews": 77,
-    "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=900&q=80",
-    "description": "Compact wireless keyboard with tactile feel and a clean desktop profile.",
-    "longDescription": "Studio Keyboard is designed for creators who want visual calm and responsive typing. Its compact footprint makes it a smart fit for refined workspace setups.",
+    "id": 19,
+    "slug": "velocity-knit",
+    "name": "Velocity Knit",
+    "category": "Footwear",
+    "price": 158,
+    "originalPrice": 189,
+    "rating": 4.4,
+    "reviews": 345,
+    "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=900&q=80",
+    "description": "Sock-fit knit upper with responsive foam for tempo runs.",
+    "longDescription": "Sock-fit knit upper with responsive foam for tempo runs. Built as a premium everyday piece for the Northstar edit, Velocity Knit balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
     "colors": [
-      "Fog",
+      "Crimson",
+      "Black"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Padded collar",
+      "All-day support foam",
+      "Breathable knit upper",
+      "Grip rubber outsole",
+      "Reflective detailing",
+      "Reinforced heel counter"
+    ],
+    "stock": 9,
+    "images": [
+      "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 20,
+    "slug": "blush-chain-crossbody",
+    "name": "Blush Chain Crossbody",
+    "category": "Accessories",
+    "price": 68,
+    "originalPrice": 80,
+    "rating": 4.3,
+    "reviews": 144,
+    "image": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=900&q=80",
+    "description": "Pastel mini crossbody with gold chain and flap closure.",
+    "longDescription": "Pastel mini crossbody with gold chain and flap closure. Built as a premium everyday piece for the Northstar edit, Blush Chain Crossbody balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Blush"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Premium hardware",
+      "Dust bag included",
+      "Full-grain leather",
+      "Adjustable strap",
+      "Interior zip pocket",
+      "Water-resistant lining"
+    ],
+    "stock": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 21,
+    "slug": "retro-chrome-headset",
+    "name": "Retro Chrome Headset",
+    "category": "Audio",
+    "price": 241,
+    "originalPrice": 292,
+    "rating": 4.4,
+    "reviews": 287,
+    "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=900&q=80",
+    "description": "Vintage-style headset with polished chrome cups and leather band.",
+    "longDescription": "Vintage-style headset with polished chrome cups and leather band. Built as a premium everyday piece for the Northstar edit, Retro Chrome Headset balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Chrome"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Bluetooth 5.3",
+      "Fast charging",
+      "Active noise cancelling",
+      "Custom EQ app",
+      "Carry case included",
+      "Multipoint pairing"
+    ],
+    "stock": 35,
+    "images": [
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 22,
+    "slug": "ultra-slim-laptop-stand",
+    "name": "Ultra Slim Laptop Stand",
+    "category": "Desk Setup",
+    "price": 151,
+    "rating": 4.7,
+    "reviews": 417,
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=900&q=80",
+    "description": "Aluminium stand that lifts your laptop to eye level.",
+    "longDescription": "Aluminium stand that lifts your laptop to eye level. Built as a premium everyday piece for the Northstar edit, Ultra Slim Laptop Stand balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Silver",
+      "Space Grey"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Recycled aluminium",
+      "Cable management",
+      "Non-slip base",
+      "Adjustable angle",
+      "Minimal footprint",
+      "USB-C powered"
+    ],
+    "stock": 22,
+    "images": [
+      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 23,
+    "slug": "chambray-utility-shirt",
+    "name": "Chambray Utility Shirt",
+    "category": "Apparel",
+    "price": 160,
+    "rating": 4.9,
+    "reviews": 308,
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=900&q=80",
+    "description": "Lightweight chambray shirt with utility pockets and pearl snaps.",
+    "longDescription": "Lightweight chambray shirt with utility pockets and pearl snaps. Built as a premium everyday piece for the Northstar edit, Chambray Utility Shirt balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Chambray"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Organic cotton",
+      "Ethically produced",
+      "Relaxed fit",
+      "Machine washable",
+      "Breathable weave",
+      "Reinforced seams"
+    ],
+    "stock": 29,
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 24,
+    "slug": "orbit-smartwatch-black",
+    "name": "Orbit Smartwatch Black",
+    "category": "Wearables",
+    "price": 194,
+    "rating": 4.8,
+    "reviews": 394,
+    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=900&q=80",
+    "description": "Matte black case with AMOLED display and sleep tracking.",
+    "longDescription": "Matte black case with AMOLED display and sleep tracking. Built as a premium everyday piece for the Northstar edit, Orbit Smartwatch Black balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Quick-release strap",
+      "Heart-rate sensor",
+      "2-year warranty",
+      "Sapphire crystal glass",
+      "Wireless charging",
+      "7-day battery life"
+    ],
+    "stock": 22,
+    "images": [
+      "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 25,
+    "slug": "court-classic-white",
+    "name": "Court Classic White",
+    "category": "Footwear",
+    "price": 144,
+    "originalPrice": 171,
+    "rating": 4.4,
+    "reviews": 137,
+    "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80",
+    "description": "Timeless white leather court shoe with perforated toe box.",
+    "longDescription": "Timeless white leather court shoe with perforated toe box. Built as a premium everyday piece for the Northstar edit, Court Classic White balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "White"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Reflective detailing",
+      "Removable insole",
+      "All-day support foam",
+      "Padded collar",
+      "Breathable knit upper",
+      "Grip rubber outsole"
+    ],
+    "stock": 21,
+    "badge": "Popular",
+    "images": [
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 26,
+    "slug": "scarlet-top-handle-bag",
+    "name": "Scarlet Top-Handle Bag",
+    "category": "Accessories",
+    "price": 144,
+    "rating": 4.6,
+    "reviews": 412,
+    "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80",
+    "description": "Bold red leather bag with structured body and lock detail.",
+    "longDescription": "Bold red leather bag with structured body and lock detail. Built as a premium everyday piece for the Northstar edit, Scarlet Top-Handle Bag balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Scarlet"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Interior zip pocket",
+      "Dust bag included",
+      "Lifetime repair",
+      "Full-grain leather",
+      "Water-resistant lining",
+      "Premium hardware"
+    ],
+    "stock": 7,
+    "images": [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 27,
+    "slug": "pod-earbuds-trio",
+    "name": "Pod Earbuds Trio",
+    "category": "Audio",
+    "price": 63,
+    "rating": 4.7,
+    "reviews": 214,
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=900&q=80",
+    "description": "Three-pack earbud set with matching charging cases.",
+    "longDescription": "Three-pack earbud set with matching charging cases. Built as a premium everyday piece for the Northstar edit, Pod Earbuds Trio balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black",
+      "White"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Fast charging",
+      "Active noise cancelling",
+      "Carry case included",
+      "Multipoint pairing",
+      "Built-in microphone",
+      "Custom EQ app"
+    ],
+    "stock": 34,
+    "images": [
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 28,
+    "slug": "phone-dock-pro",
+    "name": "Phone Dock Pro",
+    "category": "Desk Setup",
+    "price": 235,
+    "rating": 4.4,
+    "reviews": 154,
+    "image": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=900&q=80",
+    "description": "Weighted phone dock with pass-through charging.",
+    "longDescription": "Weighted phone dock with pass-through charging. Built as a premium everyday piece for the Northstar edit, Phone Dock Pro balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "2-year warranty",
+      "Cable management",
+      "USB-C powered",
+      "Recycled aluminium",
+      "Adjustable angle",
+      "Non-slip base"
+    ],
+    "stock": 36,
+    "badge": "Limited",
+    "images": [
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 29,
+    "slug": "terracotta-bomber",
+    "name": "Terracotta Bomber",
+    "category": "Apparel",
+    "price": 88,
+    "originalPrice": 111,
+    "rating": 4.8,
+    "reviews": 214,
+    "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=900&q=80",
+    "description": "Water-resistant nylon bomber in warm terracotta with ribbed trims.",
+    "longDescription": "Water-resistant nylon bomber in warm terracotta with ribbed trims. Built as a premium everyday piece for the Northstar edit, Terracotta Bomber balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Terracotta",
+      "Black"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Organic cotton",
+      "Ethically produced",
+      "Machine washable",
+      "Pre-washed for softness",
+      "Breathable weave",
+      "Relaxed fit"
+    ],
+    "stock": 47,
+    "images": [
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 30,
+    "slug": "halo-smartwatch-series",
+    "name": "Halo Smartwatch Series",
+    "category": "Wearables",
+    "price": 162,
+    "rating": 4.8,
+    "reviews": 282,
+    "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=900&q=80",
+    "description": "Colourful app grid, ECG-ready sensors and swim-proof build.",
+    "longDescription": "Colourful app grid, ECG-ready sensors and swim-proof build. Built as a premium everyday piece for the Northstar edit, Halo Smartwatch Series balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Blue",
+      "Black"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Quick-release strap",
+      "2-year warranty",
+      "Heart-rate sensor",
+      "7-day battery life",
+      "Sapphire crystal glass",
+      "Water resistant to 50m"
+    ],
+    "stock": 17,
+    "badge": "Best Seller",
+    "images": [
+      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 31,
+    "slug": "sky-retro-high",
+    "name": "Sky Retro High",
+    "category": "Footwear",
+    "price": 132,
+    "rating": 4.5,
+    "reviews": 243,
+    "image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80",
+    "description": "Retro high-top with padded collar and vintage colour blocking.",
+    "longDescription": "Retro high-top with padded collar and vintage colour blocking. Built as a premium everyday piece for the Northstar edit, Sky Retro High balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "White/Orange",
+      "Grey"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Reinforced heel counter",
+      "Breathable knit upper",
+      "All-day support foam",
+      "Removable insole",
+      "Padded collar",
+      "Reflective detailing"
+    ],
+    "stock": 11,
+    "images": [
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 32,
+    "slug": "canvas-roll-top-rucksack",
+    "name": "Canvas Roll-Top Rucksack",
+    "category": "Accessories",
+    "price": 226,
+    "originalPrice": 316,
+    "rating": 4.8,
+    "reviews": 373,
+    "image": "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=900&q=80",
+    "description": "Rugged canvas rucksack with leather trims and roll-top closure.",
+    "longDescription": "Rugged canvas rucksack with leather trims and roll-top closure. Built as a premium everyday piece for the Northstar edit, Canvas Roll-Top Rucksack balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Olive",
       "Charcoal"
     ],
     "sizes": [
-      "75% Layout"
+      "One size"
     ],
     "features": [
-      "Wireless multi-device pairing",
-      "Tactile key switches",
-      "Compact aluminum body"
+      "Interior zip pocket",
+      "Dust bag included",
+      "Full-grain leather",
+      "Premium hardware",
+      "Adjustable strap",
+      "Lifetime repair"
     ],
-    "stock": 28
+    "stock": 36,
+    "images": [
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
   },
   {
-    "id": 8,
-    "slug": "pulse-earbuds",
-    "name": "Pulse Earbuds",
+    "id": 33,
+    "slug": "air-buds-pro-case",
+    "name": "Air Buds Pro Case",
     "category": "Audio",
-    "price": 92,
-    "originalPrice": 120,
-    "rating": 4.6,
-    "reviews": 205,
-    "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=900&q=80",
-    "description": "Pocket-sized earbuds with clear calls, punchy sound, and fast pairing.",
-    "longDescription": "Pulse Earbuds are built for people moving between calls, playlists, and quick sessions out of the house. Lightweight fit and dependable sound make them easy daily sellers.",
+    "price": 227,
+    "originalPrice": 292,
+    "rating": 4.7,
+    "reviews": 307,
+    "image": "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=900&q=80",
+    "description": "True wireless buds with spatial audio and wireless charging case.",
+    "longDescription": "True wireless buds with spatial audio and wireless charging case. Built as a premium everyday piece for the Northstar edit, Air Buds Pro Case balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
     "colors": [
-      "White",
-      "Graphite"
+      "White"
     ],
     "sizes": [
-      "Standard"
+      "One size"
     ],
     "features": [
-      "Quick Bluetooth pairing",
-      "Clear voice pickup",
-      "Compact charging case"
+      "Custom EQ app",
+      "Multipoint pairing",
+      "Fast charging",
+      "Bluetooth 5.3",
+      "Active noise cancelling",
+      "Built-in microphone"
     ],
-    "stock": 35
+    "stock": 14,
+    "images": [
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 34,
+    "slug": "custom-keycap-set",
+    "name": "Custom Keycap Set",
+    "category": "Desk Setup",
+    "price": 139,
+    "rating": 4.5,
+    "reviews": 187,
+    "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=900&q=80",
+    "description": "Retro-inspired PBT keycaps with rainbow accent keys.",
+    "longDescription": "Retro-inspired PBT keycaps with rainbow accent keys. Built as a premium everyday piece for the Northstar edit, Custom Keycap Set balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Multi"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Non-slip base",
+      "Recycled aluminium",
+      "Cable management",
+      "Minimal footprint",
+      "USB-C powered",
+      "2-year warranty"
+    ],
+    "stock": 43,
+    "images": [
+      "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 35,
+    "slug": "cloud-fleece-crew",
+    "name": "Cloud Fleece Crew",
+    "category": "Apparel",
+    "price": 120,
+    "originalPrice": 150,
+    "rating": 4.5,
+    "reviews": 272,
+    "image": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=900&q=80",
+    "description": "Brushed-back fleece crewneck with dropped shoulders.",
+    "longDescription": "Brushed-back fleece crewneck with dropped shoulders. Built as a premium everyday piece for the Northstar edit, Cloud Fleece Crew balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Ivory",
+      "Grey"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Relaxed fit",
+      "Reinforced seams",
+      "Pre-washed for softness",
+      "Ethically produced",
+      "Machine washable",
+      "Organic cotton"
+    ],
+    "stock": 39,
+    "images": [
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 36,
+    "slug": "onyx-smartwatch-mini",
+    "name": "Onyx Smartwatch Mini",
+    "category": "Wearables",
+    "price": 334,
+    "rating": 4.4,
+    "reviews": 299,
+    "image": "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&w=900&q=80",
+    "description": "Compact smartwatch with silent alarms and contactless payments.",
+    "longDescription": "Compact smartwatch with silent alarms and contactless payments. Built as a premium everyday piece for the Northstar edit, Onyx Smartwatch Mini balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Water resistant to 50m",
+      "2-year warranty",
+      "Quick-release strap",
+      "Heart-rate sensor",
+      "Wireless charging",
+      "7-day battery life"
+    ],
+    "stock": 17,
+    "images": [
+      "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 37,
+    "slug": "oxford-canvas-low",
+    "name": "Oxford Canvas Low",
+    "category": "Footwear",
+    "price": 154,
+    "originalPrice": 207,
+    "rating": 4.7,
+    "reviews": 99,
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80",
+    "description": "Canvas low-profile sneaker with vulcanised rubber sole.",
+    "longDescription": "Canvas low-profile sneaker with vulcanised rubber sole. Built as a premium everyday piece for the Northstar edit, Oxford Canvas Low balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Burgundy",
+      "Navy"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Removable insole",
+      "Reinforced heel counter",
+      "Breathable knit upper",
+      "Padded collar",
+      "Reflective detailing",
+      "All-day support foam"
+    ],
+    "stock": 26,
+    "images": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 38,
+    "slug": "round-gold-sunglasses",
+    "name": "Round Gold Sunglasses",
+    "category": "Accessories",
+    "price": 216,
+    "rating": 4.8,
+    "reviews": 67,
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=80",
+    "description": "Wire-frame round sunglasses with green tinted lenses.",
+    "longDescription": "Wire-frame round sunglasses with green tinted lenses. Built as a premium everyday piece for the Northstar edit, Round Gold Sunglasses balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Gold"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Interior zip pocket",
+      "Dust bag included",
+      "Premium hardware",
+      "Lifetime repair",
+      "Full-grain leather",
+      "Water-resistant lining"
+    ],
+    "stock": 8,
+    "badge": "Best Seller",
+    "images": [
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 39,
+    "slug": "wired-classic-earphones",
+    "name": "Wired Classic Earphones",
+    "category": "Audio",
+    "price": 99,
+    "rating": 4.6,
+    "reviews": 351,
+    "image": "https://images.unsplash.com/photo-1608156639585-b3a032ef9689?auto=format&fit=crop&w=900&q=80",
+    "description": "Lightweight wired earphones with tangle-free cable.",
+    "longDescription": "Lightweight wired earphones with tangle-free cable. Built as a premium everyday piece for the Northstar edit, Wired Classic Earphones balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "White"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Active noise cancelling",
+      "Bluetooth 5.3",
+      "Fast charging",
+      "Built-in microphone",
+      "Carry case included",
+      "Multipoint pairing"
+    ],
+    "stock": 44,
+    "badge": "New",
+    "images": [
+      "https://images.unsplash.com/photo-1608156639585-b3a032ef9689?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1608156639585-b3a032ef9689?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1608156639585-b3a032ef9689?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1608156639585-b3a032ef9689?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 40,
+    "slug": "arc-floor-lamp",
+    "name": "Arc Floor Lamp",
+    "category": "Desk Setup",
+    "price": 159,
+    "originalPrice": 193,
+    "rating": 4.9,
+    "reviews": 395,
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "description": "Matte black arc lamp with dimmable warm LED.",
+    "longDescription": "Matte black arc lamp with dimmable warm LED. Built as a premium everyday piece for the Northstar edit, Arc Floor Lamp balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Adjustable angle",
+      "2-year warranty",
+      "USB-C powered",
+      "Recycled aluminium",
+      "Cable management",
+      "Minimal footprint"
+    ],
+    "stock": 22,
+    "images": [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 41,
+    "slug": "drift-overshirt",
+    "name": "Drift Overshirt",
+    "category": "Apparel",
+    "price": 180,
+    "rating": 4.5,
+    "reviews": 238,
+    "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=900&q=80",
+    "description": "Textured overshirt that layers cleanly across warm and cool weather.",
+    "longDescription": "Textured overshirt that layers cleanly across warm and cool weather. Built as a premium everyday piece for the Northstar edit, Drift Overshirt balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Olive",
+      "Rust",
+      "Stone"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Machine washable",
+      "Organic cotton",
+      "Ethically produced",
+      "Reinforced seams",
+      "Relaxed fit",
+      "Breathable weave"
+    ],
+    "stock": 10,
+    "images": [
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 42,
+    "slug": "steel-diver-automatic",
+    "name": "Steel Diver Automatic",
+    "category": "Wearables",
+    "price": 242,
+    "originalPrice": 291,
+    "rating": 4.9,
+    "reviews": 367,
+    "image": "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=crop&w=900&q=80",
+    "description": "Brushed steel diver with automatic movement and 200m rating.",
+    "longDescription": "Brushed steel diver with automatic movement and 200m rating. Built as a premium everyday piece for the Northstar edit, Steel Diver Automatic balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Steel"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Heart-rate sensor",
+      "Water resistant to 50m",
+      "7-day battery life",
+      "Wireless charging",
+      "Quick-release strap",
+      "2-year warranty"
+    ],
+    "stock": 15,
+    "images": [
+      "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 43,
+    "slug": "studio-runner",
+    "name": "Studio Runner",
+    "category": "Footwear",
+    "price": 110,
+    "rating": 4.9,
+    "reviews": 241,
+    "image": "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=900&q=80",
+    "description": "Minimal suede runner in warm sand with contrast heel tab.",
+    "longDescription": "Minimal suede runner in warm sand with contrast heel tab. Built as a premium everyday piece for the Northstar edit, Studio Runner balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Sand",
+      "Ivory"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Grip rubber outsole",
+      "Padded collar",
+      "Reflective detailing",
+      "Reinforced heel counter",
+      "Removable insole",
+      "All-day support foam"
+    ],
+    "stock": 16,
+    "images": [
+      "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 44,
+    "slug": "cat-eye-rose-frames",
+    "name": "Cat-Eye Rose Frames",
+    "category": "Accessories",
+    "price": 212,
+    "rating": 4.5,
+    "reviews": 253,
+    "image": "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=900&q=80",
+    "description": "Rose-gold cat-eye frames with gradient brown lenses.",
+    "longDescription": "Rose-gold cat-eye frames with gradient brown lenses. Built as a premium everyday piece for the Northstar edit, Cat-Eye Rose Frames balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Rose Gold"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Adjustable strap",
+      "Water-resistant lining",
+      "Lifetime repair",
+      "Premium hardware",
+      "Interior zip pocket",
+      "Full-grain leather"
+    ],
+    "stock": 11,
+    "badge": "New",
+    "images": [
+      "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 45,
+    "slug": "deep-focus-anc",
+    "name": "Deep Focus ANC",
+    "category": "Audio",
+    "price": 235,
+    "originalPrice": 302,
+    "rating": 4.5,
+    "reviews": 357,
+    "image": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=900&q=80",
+    "description": "Over-ear ANC with 40-hour battery and transparency mode.",
+    "longDescription": "Over-ear ANC with 40-hour battery and transparency mode. Built as a premium everyday piece for the Northstar edit, Deep Focus ANC balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Built-in microphone",
+      "Carry case included",
+      "Bluetooth 5.3",
+      "Custom EQ app",
+      "Active noise cancelling",
+      "Multipoint pairing"
+    ],
+    "stock": 10,
+    "images": [
+      "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 46,
+    "slug": "desk-flatlay-organiser",
+    "name": "Desk Flatlay Organiser",
+    "category": "Desk Setup",
+    "price": 57,
+    "rating": 4.5,
+    "reviews": 58,
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+    "description": "Felt and oak desk organiser for pens, cables and notes.",
+    "longDescription": "Felt and oak desk organiser for pens, cables and notes. Built as a premium everyday piece for the Northstar edit, Desk Flatlay Organiser balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Oak"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Adjustable angle",
+      "USB-C powered",
+      "2-year warranty",
+      "Cable management",
+      "Minimal footprint",
+      "Recycled aluminium"
+    ],
+    "stock": 17,
+    "images": [
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 47,
+    "slug": "moto-leather-jacket",
+    "name": "Moto Leather Jacket",
+    "category": "Apparel",
+    "price": 106,
+    "rating": 4.4,
+    "reviews": 301,
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=80",
+    "description": "Buttery leather biker jacket with asymmetric zip and quilted lining.",
+    "longDescription": "Buttery leather biker jacket with asymmetric zip and quilted lining. Built as a premium everyday piece for the Northstar edit, Moto Leather Jacket balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Pre-washed for softness",
+      "Ethically produced",
+      "Relaxed fit",
+      "Machine washable",
+      "Breathable weave",
+      "Organic cotton"
+    ],
+    "stock": 26,
+    "images": [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 48,
+    "slug": "bronze-field-chrono",
+    "name": "Bronze Field Chrono",
+    "category": "Wearables",
+    "price": 164,
+    "originalPrice": 221,
+    "rating": 4.5,
+    "reviews": 46,
+    "image": "https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&w=900&q=80",
+    "description": "Bronze-toned chronograph with textured dial and mesh band.",
+    "longDescription": "Bronze-toned chronograph with textured dial and mesh band. Built as a premium everyday piece for the Northstar edit, Bronze Field Chrono balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Bronze"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Wireless charging",
+      "Quick-release strap",
+      "2-year warranty",
+      "Heart-rate sensor",
+      "Water resistant to 50m",
+      "Sapphire crystal glass"
+    ],
+    "stock": 22,
+    "images": [
+      "https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 49,
+    "slug": "field-trainer",
+    "name": "Field Trainer",
+    "category": "Footwear",
+    "price": 88,
+    "rating": 4.8,
+    "reviews": 270,
+    "image": "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80",
+    "description": "Olive trail-ready trainer with reinforced toe and lugged outsole.",
+    "longDescription": "Olive trail-ready trainer with reinforced toe and lugged outsole. Built as a premium everyday piece for the Northstar edit, Field Trainer balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Olive",
+      "Charcoal"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Padded collar",
+      "Reinforced heel counter",
+      "Grip rubber outsole",
+      "All-day support foam",
+      "Removable insole",
+      "Reflective detailing"
+    ],
+    "stock": 32,
+    "images": [
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 50,
+    "slug": "slim-bifold-wallet",
+    "name": "Slim Bifold Wallet",
+    "category": "Accessories",
+    "price": 110,
+    "rating": 4.9,
+    "reviews": 172,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=900&q=80",
+    "description": "Full-grain leather bifold with six card slots and RFID lining.",
+    "longDescription": "Full-grain leather bifold with six card slots and RFID lining. Built as a premium everyday piece for the Northstar edit, Slim Bifold Wallet balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Brown",
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Water-resistant lining",
+      "Dust bag included",
+      "Full-grain leather",
+      "Adjustable strap",
+      "Premium hardware",
+      "Lifetime repair"
+    ],
+    "stock": 25,
+    "images": [
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 51,
+    "slug": "cream-wireless-on-ear",
+    "name": "Cream Wireless On-Ear",
+    "category": "Audio",
+    "price": 205,
+    "rating": 4.6,
+    "reviews": 129,
+    "image": "https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&w=900&q=80",
+    "description": "Warm cream on-ear headphones with rose-gold accents.",
+    "longDescription": "Warm cream on-ear headphones with rose-gold accents. Built as a premium everyday piece for the Northstar edit, Cream Wireless On-Ear balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Cream"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Fast charging",
+      "Multipoint pairing",
+      "Active noise cancelling",
+      "Custom EQ app",
+      "Carry case included",
+      "Bluetooth 5.3"
+    ],
+    "stock": 7,
+    "images": [
+      "https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 52,
+    "slug": "modular-desk-mat",
+    "name": "Modular Desk Mat",
+    "category": "Desk Setup",
+    "price": 93,
+    "originalPrice": 107,
+    "rating": 4.6,
+    "reviews": 266,
+    "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=900&q=80",
+    "description": "Stitched vegan-leather desk mat with cable routing.",
+    "longDescription": "Stitched vegan-leather desk mat with cable routing. Built as a premium everyday piece for the Northstar edit, Modular Desk Mat balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Tan",
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Adjustable angle",
+      "USB-C powered",
+      "Non-slip base",
+      "Minimal footprint",
+      "Recycled aluminium",
+      "2-year warranty"
+    ],
+    "stock": 33,
+    "images": [
+      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 53,
+    "slug": "lounge-jogger-set",
+    "name": "Lounge Jogger Set",
+    "category": "Apparel",
+    "price": 206,
+    "rating": 4.4,
+    "reviews": 155,
+    "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=80",
+    "description": "Matching hoodie and jogger in dusty rose French terry.",
+    "longDescription": "Matching hoodie and jogger in dusty rose French terry. Built as a premium everyday piece for the Northstar edit, Lounge Jogger Set balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Rose",
+      "Oat"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Reinforced seams",
+      "Pre-washed for softness",
+      "Relaxed fit",
+      "Ethically produced",
+      "Machine washable",
+      "Breathable weave"
+    ],
+    "stock": 46,
+    "images": [
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 54,
+    "slug": "sport-loop-smartwatch",
+    "name": "Sport Loop Smartwatch",
+    "category": "Wearables",
+    "price": 190,
+    "originalPrice": 235,
+    "rating": 4.3,
+    "reviews": 417,
+    "image": "https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=crop&w=900&q=80",
+    "description": "Breathable sport loop band with dual-band GPS.",
+    "longDescription": "Breathable sport loop band with dual-band GPS. Built as a premium everyday piece for the Northstar edit, Sport Loop Smartwatch balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black",
+      "Grey"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "7-day battery life",
+      "Quick-release strap",
+      "Heart-rate sensor",
+      "2-year warranty",
+      "Sapphire crystal glass",
+      "Water resistant to 50m"
+    ],
+    "stock": 33,
+    "images": [
+      "https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1544117519-31a4b719223d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 55,
+    "slug": "cloud-street-high",
+    "name": "Cloud Street High",
+    "category": "Footwear",
+    "price": 98,
+    "originalPrice": 128,
+    "rating": 4.4,
+    "reviews": 188,
+    "image": "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&w=900&q=80",
+    "description": "Cushioned high-top with a clean leather upper and ankle support.",
+    "longDescription": "Cushioned high-top with a clean leather upper and ankle support. Built as a premium everyday piece for the Northstar edit, Cloud Street High balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "White/Red",
+      "Black"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Reflective detailing",
+      "Breathable knit upper",
+      "Grip rubber outsole",
+      "Reinforced heel counter",
+      "Removable insole",
+      "All-day support foam"
+    ],
+    "stock": 16,
+    "images": [
+      "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 56,
+    "slug": "mauve-leather-backpack",
+    "name": "Mauve Leather Backpack",
+    "category": "Accessories",
+    "price": 110,
+    "originalPrice": 133,
+    "rating": 4.3,
+    "reviews": 196,
+    "image": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=900&q=80",
+    "description": "Soft pebbled leather backpack in dusty mauve.",
+    "longDescription": "Soft pebbled leather backpack in dusty mauve. Built as a premium everyday piece for the Northstar edit, Mauve Leather Backpack balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Mauve"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Lifetime repair",
+      "Interior zip pocket",
+      "Full-grain leather",
+      "Premium hardware",
+      "Water-resistant lining",
+      "Adjustable strap"
+    ],
+    "stock": 6,
+    "images": [
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 57,
+    "slug": "nightfall-earbuds",
+    "name": "Nightfall Earbuds",
+    "category": "Audio",
+    "price": 219,
+    "originalPrice": 277,
+    "rating": 4.6,
+    "reviews": 40,
+    "image": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=900&q=80",
+    "description": "Matte black buds with low-latency mode and 30h total playback.",
+    "longDescription": "Matte black buds with low-latency mode and 30h total playback. Built as a premium everyday piece for the Northstar edit, Nightfall Earbuds balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Custom EQ app",
+      "Multipoint pairing",
+      "Fast charging",
+      "Bluetooth 5.3",
+      "Carry case included",
+      "Active noise cancelling"
+    ],
+    "stock": 15,
+    "badge": "Best Seller",
+    "images": [
+      "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 58,
+    "slug": "mechanical-keyboard-75",
+    "name": "Mechanical Keyboard 75",
+    "category": "Desk Setup",
+    "price": 131,
+    "rating": 4.5,
+    "reviews": 157,
+    "image": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=900&q=80",
+    "description": "Hot-swappable 75% mechanical keyboard with aluminium frame.",
+    "longDescription": "Hot-swappable 75% mechanical keyboard with aluminium frame. Built as a premium everyday piece for the Northstar edit, Mechanical Keyboard 75 balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Grey",
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Recycled aluminium",
+      "Minimal footprint",
+      "USB-C powered",
+      "Cable management",
+      "Adjustable angle",
+      "2-year warranty"
+    ],
+    "stock": 15,
+    "images": [
+      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 59,
+    "slug": "rail-capsule-pack",
+    "name": "Rail Capsule Pack",
+    "category": "Apparel",
+    "price": 206,
+    "rating": 4.7,
+    "reviews": 291,
+    "image": "https://images.unsplash.com/photo-1512327428889-607eeb19efe8?auto=format&fit=crop&w=900&q=80",
+    "description": "Five-piece wardrobe essentials capsule in seasonal tones.",
+    "longDescription": "Five-piece wardrobe essentials capsule in seasonal tones. Built as a premium everyday piece for the Northstar edit, Rail Capsule Pack balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Assorted"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Breathable weave",
+      "Machine washable",
+      "Pre-washed for softness",
+      "Organic cotton",
+      "Ethically produced",
+      "Reinforced seams"
+    ],
+    "stock": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1512327428889-607eeb19efe8?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1512327428889-607eeb19efe8?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1512327428889-607eeb19efe8?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1512327428889-607eeb19efe8?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 60,
+    "slug": "aviator-chronograph",
+    "name": "Aviator Chronograph",
+    "category": "Wearables",
+    "price": 194,
+    "originalPrice": 263,
+    "rating": 4.7,
+    "reviews": 296,
+    "image": "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=900&q=80",
+    "description": "Ivory dial aviator with tachymeter bezel and brown strap.",
+    "longDescription": "Ivory dial aviator with tachymeter bezel and brown strap. Built as a premium everyday piece for the Northstar edit, Aviator Chronograph balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Brown"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Sapphire crystal glass",
+      "2-year warranty",
+      "Quick-release strap",
+      "Wireless charging",
+      "Heart-rate sensor",
+      "Water resistant to 50m"
+    ],
+    "stock": 38,
+    "images": [
+      "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 61,
+    "slug": "metro-mid-top",
+    "name": "Metro Mid Top",
+    "category": "Footwear",
+    "price": 150,
+    "rating": 4.3,
+    "reviews": 106,
+    "image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=900&q=80",
+    "description": "Mid-cut street sneaker with premium leather and padded tongue.",
+    "longDescription": "Mid-cut street sneaker with premium leather and padded tongue. Built as a premium everyday piece for the Northstar edit, Metro Mid Top balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "White",
+      "Cream"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Reflective detailing",
+      "Padded collar",
+      "Removable insole",
+      "Breathable knit upper",
+      "Reinforced heel counter",
+      "Grip rubber outsole"
+    ],
+    "stock": 12,
+    "images": [
+      "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 62,
+    "slug": "teal-structured-tote",
+    "name": "Teal Structured Tote",
+    "category": "Accessories",
+    "price": 138,
+    "rating": 4.3,
+    "reviews": 310,
+    "image": "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=900&q=80",
+    "description": "Petrol-blue tote with polished hardware and interior zip pocket.",
+    "longDescription": "Petrol-blue tote with polished hardware and interior zip pocket. Built as a premium everyday piece for the Northstar edit, Teal Structured Tote balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Teal"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Interior zip pocket",
+      "Water-resistant lining",
+      "Lifetime repair",
+      "Dust bag included",
+      "Adjustable strap",
+      "Premium hardware"
+    ],
+    "stock": 37,
+    "images": [
+      "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 63,
+    "slug": "micro-buds-sport",
+    "name": "Micro Buds Sport",
+    "category": "Audio",
+    "price": 183,
+    "originalPrice": 246,
+    "rating": 4.6,
+    "reviews": 419,
+    "image": "https://images.unsplash.com/photo-1598331668826-20cecc596b86?auto=format&fit=crop&w=900&q=80",
+    "description": "Compact sport buds with ear hooks and sweat resistance.",
+    "longDescription": "Compact sport buds with ear hooks and sweat resistance. Built as a premium everyday piece for the Northstar edit, Micro Buds Sport balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Bluetooth 5.3",
+      "Custom EQ app",
+      "Active noise cancelling",
+      "Fast charging",
+      "Carry case included",
+      "Built-in microphone"
+    ],
+    "stock": 22,
+    "badge": "New",
+    "images": [
+      "https://images.unsplash.com/photo-1598331668826-20cecc596b86?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1598331668826-20cecc596b86?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1598331668826-20cecc596b86?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1598331668826-20cecc596b86?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 64,
+    "slug": "monitor-riser-shelf",
+    "name": "Monitor Riser Shelf",
+    "category": "Desk Setup",
+    "price": 235,
+    "originalPrice": 285,
+    "rating": 4.7,
+    "reviews": 273,
+    "image": "https://images.unsplash.com/photo-1586210579191-33b45e38fa2c?auto=format&fit=crop&w=900&q=80",
+    "description": "Walnut monitor riser with hidden drawer for essentials.",
+    "longDescription": "Walnut monitor riser with hidden drawer for essentials. Built as a premium everyday piece for the Northstar edit, Monitor Riser Shelf balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Walnut"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Minimal footprint",
+      "Adjustable angle",
+      "USB-C powered",
+      "2-year warranty",
+      "Non-slip base",
+      "Recycled aluminium"
+    ],
+    "stock": 30,
+    "images": [
+      "https://images.unsplash.com/photo-1586210579191-33b45e38fa2c?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1586210579191-33b45e38fa2c?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1586210579191-33b45e38fa2c?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1586210579191-33b45e38fa2c?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 65,
+    "slug": "camel-wool-blazer",
+    "name": "Camel Wool Blazer",
+    "category": "Apparel",
+    "price": 56,
+    "rating": 4.7,
+    "reviews": 139,
+    "image": "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=900&q=80",
+    "description": "Tailored camel blazer in soft wool blend with notch lapel.",
+    "longDescription": "Tailored camel blazer in soft wool blend with notch lapel. Built as a premium everyday piece for the Northstar edit, Camel Wool Blazer balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Camel",
+      "Charcoal"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Reinforced seams",
+      "Pre-washed for softness",
+      "Relaxed fit",
+      "Organic cotton",
+      "Breathable weave",
+      "Ethically produced"
+    ],
+    "stock": 27,
+    "badge": "Limited",
+    "images": [
+      "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 66,
+    "slug": "sunset-chronograph",
+    "name": "Sunset Chronograph",
+    "category": "Wearables",
+    "price": 250,
+    "rating": 4.6,
+    "reviews": 286,
+    "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=80",
+    "description": "Rose-gold chronograph with sunray dial and leather band.",
+    "longDescription": "Rose-gold chronograph with sunray dial and leather band. Built as a premium everyday piece for the Northstar edit, Sunset Chronograph balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Rose Gold"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Sapphire crystal glass",
+      "Wireless charging",
+      "2-year warranty",
+      "Water resistant to 50m",
+      "7-day battery life",
+      "Quick-release strap"
+    ],
+    "stock": 12,
+    "images": [
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 67,
+    "slug": "pulse-force-low",
+    "name": "Pulse Force Low",
+    "category": "Footwear",
+    "price": 166,
+    "originalPrice": 211,
+    "rating": 4.6,
+    "reviews": 98,
+    "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&w=900&q=80",
+    "description": "Low-cut everyday sneaker with reflective hits and grip outsole.",
+    "longDescription": "Low-cut everyday sneaker with reflective hits and grip outsole. Built as a premium everyday piece for the Northstar edit, Pulse Force Low balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black",
+      "White"
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "features": [
+      "Grip rubber outsole",
+      "Reinforced heel counter",
+      "Breathable knit upper",
+      "Reflective detailing",
+      "Padded collar",
+      "Removable insole"
+    ],
+    "stock": 41,
+    "images": [
+      "https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 68,
+    "slug": "croc-mini-bucket-bag",
+    "name": "Croc Mini Bucket Bag",
+    "category": "Accessories",
+    "price": 92,
+    "originalPrice": 107,
+    "rating": 4.6,
+    "reviews": 297,
+    "image": "https://images.unsplash.com/photo-1575032617751-6ddec2089882?auto=format&fit=crop&w=900&q=80",
+    "description": "Embossed croc mini bucket bag with detachable strap.",
+    "longDescription": "Embossed croc mini bucket bag with detachable strap. Built as a premium everyday piece for the Northstar edit, Croc Mini Bucket Bag balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Oxblood"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Premium hardware",
+      "Adjustable strap",
+      "Interior zip pocket",
+      "Full-grain leather",
+      "Dust bag included",
+      "Lifetime repair"
+    ],
+    "stock": 34,
+    "badge": "New",
+    "images": [
+      "https://images.unsplash.com/photo-1575032617751-6ddec2089882?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1575032617751-6ddec2089882?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1575032617751-6ddec2089882?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1575032617751-6ddec2089882?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 69,
+    "slug": "shadow-anc-over-ear",
+    "name": "Shadow ANC Over-Ear",
+    "category": "Audio",
+    "price": 185,
+    "originalPrice": 255,
+    "rating": 4.4,
+    "reviews": 420,
+    "image": "https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=crop&w=900&q=80",
+    "description": "Flagship ANC over-ear with adaptive EQ and plush cushions.",
+    "longDescription": "Flagship ANC over-ear with adaptive EQ and plush cushions. Built as a premium everyday piece for the Northstar edit, Shadow ANC Over-Ear balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Bluetooth 5.3",
+      "Fast charging",
+      "Multipoint pairing",
+      "Custom EQ app",
+      "Carry case included",
+      "Built-in microphone"
+    ],
+    "stock": 29,
+    "images": [
+      "https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 70,
+    "slug": "stream-webcam-4k",
+    "name": "Stream Webcam 4K",
+    "category": "Desk Setup",
+    "price": 61,
+    "rating": 4.7,
+    "reviews": 156,
+    "image": "https://images.unsplash.com/photo-1629429407756-446d66f5b24e?auto=format&fit=crop&w=900&q=80",
+    "description": "4K webcam with auto-framing and privacy shutter.",
+    "longDescription": "4K webcam with auto-framing and privacy shutter. Built as a premium everyday piece for the Northstar edit, Stream Webcam 4K balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+      "One size"
+    ],
+    "features": [
+      "Cable management",
+      "Non-slip base",
+      "Minimal footprint",
+      "2-year warranty",
+      "USB-C powered",
+      "Recycled aluminium"
+    ],
+    "stock": 37,
+    "images": [
+      "https://images.unsplash.com/photo-1629429407756-446d66f5b24e?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1629429407756-446d66f5b24e?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1629429407756-446d66f5b24e?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1629429407756-446d66f5b24e?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 71,
+    "slug": "hotel-boxy-tee",
+    "name": "Hotel Boxy Tee",
+    "category": "Apparel",
+    "price": 138,
+    "originalPrice": 158,
+    "rating": 4.5,
+    "reviews": 110,
+    "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=900&q=80",
+    "description": "Boxy-fit premium tee with tonal embroidery and side splits.",
+    "longDescription": "Boxy-fit premium tee with tonal embroidery and side splits. Built as a premium everyday piece for the Northstar edit, Hotel Boxy Tee balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "White",
+      "Ecru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Reinforced seams",
+      "Machine washable",
+      "Organic cotton",
+      "Relaxed fit",
+      "Ethically produced",
+      "Pre-washed for softness"
+    ],
+    "stock": 30,
+    "badge": "Hot",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
+  },
+  {
+    "id": 72,
+    "slug": "explorer-automatic",
+    "name": "Explorer Automatic",
+    "category": "Wearables",
+    "price": 280,
+    "originalPrice": 345,
+    "rating": 4.4,
+    "reviews": 138,
+    "image": "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&w=900&q=80",
+    "description": "Japanese automatic with black dial and NATO strap.",
+    "longDescription": "Japanese automatic with black dial and NATO strap. Built as a premium everyday piece for the Northstar edit, Explorer Automatic balances considered materials with a clean, modern silhouette so it fits into any routine without shouting.",
+    "colors": [
+      "Green",
+      "Black"
+    ],
+    "sizes": [
+      "40mm",
+      "44mm"
+    ],
+    "features": [
+      "Wireless charging",
+      "7-day battery life",
+      "Heart-rate sensor",
+      "Sapphire crystal glass",
+      "Quick-release strap",
+      "2-year warranty"
+    ],
+    "stock": 24,
+    "badge": "Limited",
+    "images": [
+      "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=fill&fill=blur&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&fp-z=1.2&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80",
+      "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.5&fp-z=1.4&w=1200&h=900&q=80"
+    ]
   }
 ]

@@ -1,53 +1,32 @@
-import { CreditCard, PackageCheck, RefreshCcw, Shield } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Headset, RefreshCcw, Shield, Truck } from "lucide-react";
 
 const items = [
-  {
-    icon: PackageCheck,
-    title: "Fast fulfillment",
-    text: "Orders leave the warehouse in under 24 hours.",
-    accent: "bg-emerald-100 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-300",
-  },
-  {
-    icon: RefreshCcw,
-    title: "Easy returns",
-    text: "Hassle-free 30 day returns for every launch drop.",
-    accent: "bg-sky-100 text-sky-700 dark:bg-sky-400/15 dark:text-sky-300",
-  },
-  {
-    icon: Shield,
-    title: "Protected checkout",
-    text: "Secure payment flow with shopper-first confidence.",
-    accent: "bg-violet-100 text-violet-700 dark:bg-violet-400/15 dark:text-violet-300",
-  },
-  {
-    icon: CreditCard,
-    title: "Flexible payments",
-    text: "Offer cards, wallets, and split-pay options later.",
-    accent: "bg-amber-100 text-amber-700 dark:bg-amber-400/15 dark:text-amber-300",
-  },
+  { icon: Truck, title: "Free shipping", text: "On orders above $120" },
+  { icon: RefreshCcw, title: "Easy returns", text: "30-day return policy" },
+  { icon: Shield, title: "Secure payment", text: "100% protected checkout" },
+  { icon: Headset, title: "24/7 support", text: "We are here to help" },
 ];
 
 export function ValueProps() {
   return (
-    <section id="benefits" className="py-10 sm:py-14">
-      <div className="container grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        {items.map((item) => {
-          const Icon = item.icon;
-          return (
-            <Card key={item.title} className="transition duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-sm">
-              <CardContent className="space-y-4 p-6">
-                <div className={`flex h-14 w-14 items-center justify-center rounded-xl ${item.accent}`}>
-                  <Icon className="h-6 w-6" />
+    <section id="benefits" className="relative z-10 -mt-6 lg:-mt-12">
+      <div className="container">
+        <div className="grid divide-y divide-border rounded-2xl border border-border bg-card shadow-soft sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
+          {items.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.title} className="flex items-center gap-4 px-6 py-5">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/70 text-foreground dark:bg-accent">
+                  <Icon className="h-5 w-5" strokeWidth={1.6} />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold">{item.title}</h3>
-                  <p className="mt-1.5 text-sm leading-6 text-muted-foreground">{item.text}</p>
+                  <p className="text-sm font-bold">{item.title}</p>
+                  <p className="text-xs text-muted-foreground">{item.text}</p>
                 </div>
-              </CardContent>
-            </Card>
-          );
-        })}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

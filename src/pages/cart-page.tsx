@@ -23,13 +23,13 @@ export function CartPage() {
         title="Shopping cart"
         description="Review quantities, delivery costs, and order total."
       />
-      <section className="pb-16">
+      <section className="pb-16 pt-8 sm:pb-20">
         <div className="container grid gap-6 lg:grid-cols-[1fr_360px]">
           <div className="space-y-4">
             {cartItems.length === 0 ? (
               <EmptyState
                 title="Your cart is empty"
-                description="Add products from the catalog and they will show up here with quantity controls and totals."
+                description="Add something you love and it will show up here."
                 actions={
                   <Button asChild>
                     <Link to="/shop">Browse products</Link>

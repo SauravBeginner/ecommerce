@@ -1,4 +1,4 @@
-import { CheckCircle2, Facebook, Instagram, Mail, MapPin, Phone, Sparkles, Twitter, Youtube } from "lucide-react";
+import { CheckCircle2, Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const shopLinks = [
@@ -46,14 +46,8 @@ export function Footer({ message }: FooterProps) {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-5">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground shadow-sm">
-                <Sparkles className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-lg font-extrabold">Northstar</p>
-                <p className="text-xs text-muted-foreground">Premium essentials</p>
-              </div>
+            <Link to="/" className="inline-flex items-baseline font-display text-2xl tracking-tight text-foreground">
+              Northstar<span className="text-brand">.</span>
             </Link>
             <p className="text-sm leading-6 text-muted-foreground">
               Curated apparel, audio, carry goods, and desk pieces for sharper daily routines. Quality you can feel, delivered fast.
@@ -162,7 +156,7 @@ export function Footer({ message }: FooterProps) {
                 {message}
               </span>
             ) : (
-              <span>© 2025 Northstar Commerce. All rights reserved.</span>
+              <span>© 2026 Northstar Commerce. All rights reserved.</span>
             )}
           </div>
           <div className="flex flex-wrap gap-4">

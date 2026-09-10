@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import { BrandStrip } from "@/components/sections/brand-strip";
 import { CategoryGrid } from "@/components/sections/category-grid";
+import { PromoBanners } from "@/components/sections/promo-banners";
 import { Hero } from "@/components/sections/hero";
 import { Newsletter } from "@/components/sections/newsletter";
 import { ProductGrid } from "@/components/sections/product-grid";
-import { StatsBar } from "@/components/sections/stats-bar";
 import { ValueProps } from "@/components/sections/value-props";
 import { Button } from "@/components/ui/button";
 import { useStorefront } from "@/store/storefront";
@@ -14,12 +15,13 @@ export function HomePage() {
   return (
     <>
       <Hero />
-      <StatsBar />
+      <ValueProps />
       <CategoryGrid />
+      <PromoBanners />
       <ProductGrid
         products={featuredProducts}
-        title="Best sellers for modern routines"
-        description="Customer favorites across apparel, audio, desk setup, and carry goods."
+        title="Trending this season"
+        description="Customer favourites across apparel, audio, desk setup, and carry goods."
       />
       <section className="pb-6">
         <div className="container flex justify-center">
@@ -28,7 +30,7 @@ export function HomePage() {
           </Button>
         </div>
       </section>
-      <ValueProps />
+      <BrandStrip />
       <Newsletter email={email} setEmail={setEmail} onSubmit={submitNewsletter} />
     </>
   );

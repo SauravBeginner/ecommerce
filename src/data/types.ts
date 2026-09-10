@@ -8,6 +8,7 @@ export type Product = {
   rating: number;
   reviews: number;
   image: string;
+  images?: string[];
   badge?: string;
   description: string;
   longDescription: string;

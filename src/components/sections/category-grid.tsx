@@ -1,77 +1,75 @@
-import { Headphones, LampDesk, Shirt, Watch } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Card, CardContent } from "@/components/ui/card";
 
 const categories = [
   {
-    name: "Wearables",
-    icon: Watch,
-    accent: "bg-emerald-100 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-300",
-    border: "border-l-4 border-l-emerald-400",
-    gradient: "from-emerald-50/70 to-transparent dark:from-emerald-500/5",
-    query: "Wearables",
-  },
-  {
     name: "Apparel",
-    icon: Shirt,
-    accent: "bg-sky-100 text-sky-700 dark:bg-sky-400/15 dark:text-sky-300",
-    border: "border-l-4 border-l-sky-400",
-    gradient: "from-sky-50/70 to-transparent dark:from-sky-500/5",
-    query: "Apparel",
+    sub: "Knits & layers",
+    image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600&q=80",
   },
   {
-    name: "Desk Setup",
-    icon: LampDesk,
-    accent: "bg-amber-100 text-amber-700 dark:bg-amber-400/15 dark:text-amber-300",
-    border: "border-l-4 border-l-amber-400",
-    gradient: "from-amber-50/70 to-transparent dark:from-amber-500/5",
-    query: "Desk Setup",
+    name: "Footwear",
+    sub: "Sneakers & shoes",
+    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    name: "Accessories",
+    sub: "Bags & eyewear",
+    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    name: "Wearables",
+    sub: "Watches & bands",
+    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "Audio",
-    icon: Headphones,
-    accent: "bg-rose-100 text-rose-700 dark:bg-rose-400/15 dark:text-rose-300",
-    border: "border-l-4 border-l-rose-400",
-    gradient: "from-rose-50/70 to-transparent dark:from-rose-500/5",
-    query: "Audio",
+    sub: "Headphones & buds",
+    image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    name: "Desk Setup",
+    sub: "Lamps & keyboards",
+    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
 export function CategoryGrid() {
   return (
-    <section id="categories" className="border-y border-border/70 bg-muted/35 py-10 sm:py-14">
+    <section id="categories" className="py-10 sm:py-14">
       <div className="container">
-        <div className="mb-6 flex items-end justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-              Categories
-            </p>
-            <h2 className="mt-2 text-3xl font-extrabold">
-              Explore by collection
-            </h2>
-          </div>
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <h2 className="font-display text-3xl sm:text-4xl">
+            Shop by <span className="italic text-brand">Category</span>
+          </h2>
+          <Link to="/shop" className="text-sm font-semibold text-brand hover:underline">
+            View all categories →
+          </Link>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {categories.map((category) => {
-            const Icon = category.icon;
-            return (
-              <Link key={category.name} to={`/shop?category=${encodeURIComponent(category.query)}`}>
-                <Card className={`overflow-hidden transition duration-200 hover:-translate-y-1 hover:shadow-md ${category.border}`}>
-                  <CardContent className={`flex items-center justify-between bg-gradient-to-r p-6 ${category.gradient}`}>
-                    <div>
-                      <p className="text-lg font-bold">{category.name}</p>
-                      <p className="mt-1 text-sm text-muted-foreground">Fresh arrivals weekly</p>
-                    </div>
-                    <div
-                      className={`flex h-14 w-14 items-center justify-center rounded-xl ${category.accent}`}
-                    >
-                      <Icon className="h-6 w-6" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            );
-          })}
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
+          {categories.map((category) => (
+            <Link
+              key={category.name}
+              to={`/shop?category=${encodeURIComponent(category.name)}`}
+              className="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-accent/50 shadow-soft"
+            >
+              <img
+                src={category.image}
+                alt={category.name}
+                className="img-warm absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(24_20%_12%/0.75)] via-transparent to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 text-background">
+                <div>
+                  <p className="font-display text-lg leading-tight">{category.name}</p>
+                  <p className="text-[11px] text-background/70">{category.sub}</p>
+                </div>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-background text-foreground transition group-hover:bg-brand group-hover:text-brand-foreground">
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

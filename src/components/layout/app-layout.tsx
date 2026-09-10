@@ -22,7 +22,7 @@ export function AppLayout() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Announcement bar — scrolls away, not sticky */}
-      <div className="bg-primary px-4 py-2 text-center text-xs font-medium text-primary-foreground">
+      <div className="bg-brand px-4 py-2 text-center text-xs font-medium text-brand-foreground">
         Free shipping on all orders above $120 · Use code{" "}
         <span className="font-bold tracking-wide">NORTHSTAR10</span> for 10% off{" "}
         <Link to="/shop" className="ml-1 font-bold underline underline-offset-2 hover:opacity-80">

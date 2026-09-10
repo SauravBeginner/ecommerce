@@ -22,23 +22,17 @@ export function ProductCard({ product }: ProductCardProps) {
       <CardContent className="p-0">
         <div className="relative overflow-hidden">
           <Link to={`/product/${product.slug}`}>
-            <div className="aspect-[4/3] overflow-hidden bg-muted">
+            <div className="aspect-[4/3] overflow-hidden bg-accent/40 dark:bg-accent/20">
               <img
                 src={product.image}
                 alt={product.name}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                className="img-warm h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
             </div>
           </Link>
-          <div className="absolute left-3 top-3 flex items-center gap-1.5">
-            {product.badge ? <Badge>{product.badge}</Badge> : null}
-            <Badge variant="outline" className="bg-card/90 backdrop-blur-sm">{product.category}</Badge>
-          </div>
-          {discount ? (
-            <span className="absolute bottom-3 left-3 rounded-full bg-rose-500 px-2.5 py-0.5 text-xs font-bold text-white shadow-sm">
-              -{discount}%
-            </span>
-          ) : null}
+          <Badge variant="outline" className="absolute left-3 top-3 bg-card/90 backdrop-blur-sm">
+            {product.category}
+          </Badge>
           <button
             className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-md bg-card/95 text-foreground shadow-sm backdrop-blur transition hover:scale-105 hover:bg-card"
             aria-label={saved ? `Remove ${product.name} from wishlist` : `Save ${product.name}`}
@@ -49,13 +43,18 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
         <div className="space-y-3 p-4">
           <div className="space-y-1.5">
-            <div className="flex items-center gap-1.5 text-sm text-amber-500">
-              <Star className="h-3.5 w-3.5 fill-current" />
-              <span className="font-semibold text-foreground">{product.rating}</span>
-              <span className="text-muted-foreground">({product.reviews})</span>
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-1.5 text-sm text-brand">
+                <Star className="h-3.5 w-3.5 fill-current" />
+                <span className="font-semibold text-foreground">{product.rating}</span>
+                <span className="text-muted-foreground">({product.reviews})</span>
+              </div>
+              {product.badge ? (
+                <Badge className="bg-brand/10 text-[11px] uppercase tracking-wide text-brand">{product.badge}</Badge>
+              ) : null}
             </div>
             <Link to={`/product/${product.slug}`} className="block">
-              <h3 className="text-base font-bold leading-snug transition-colors hover:text-primary">{product.name}</h3>
+              <h3 className="text-base font-semibold leading-snug transition-colors hover:text-primary">{product.name}</h3>
             </Link>
             <p className="line-clamp-2 min-h-10 text-sm leading-5 text-muted-foreground">{product.description}</p>
           </div>
@@ -65,6 +64,11 @@ export function ProductCard({ product }: ProductCardProps) {
               {product.originalPrice ? (
                 <span className="ml-2 text-xs text-muted-foreground line-through">
                   ${product.originalPrice.toFixed(2)}
+                </span>
+              ) : null}
+              {discount ? (
+                <span className="ml-2 rounded-full bg-brand/10 px-1.5 py-0.5 text-[11px] font-bold text-brand">
+                  -{discount}%
                 </span>
               ) : null}
             </div>

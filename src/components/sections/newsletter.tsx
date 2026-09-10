@@ -17,19 +17,19 @@ export function Newsletter({ email, setEmail, onSubmit }: NewsletterProps) {
   };
 
   return (
-    <section className="pb-16 pt-8 sm:pb-20">
+    <section className="pb-16 pt-10 sm:pb-20 sm:pt-14">
       <div className="container">
-        <Card className="overflow-hidden bg-slate-950 text-white">
+        <Card className="overflow-hidden bg-foreground text-background">
           <CardContent className="grid gap-8 p-8 sm:p-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-background/60">
                 Stay in the loop
               </p>
-              <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-                Launch offers, curated drops, and smarter conversion ideas.
+              <h2 className="mt-3 font-display text-3xl sm:text-4xl">
+                Early access to new drops, member offers, and seasonal edits.
               </h2>
-              <p className="mt-4 max-w-xl text-sm leading-7 text-white/70">
-                Get first access to new drops, limited offers, and seasonal edits.
+              <p className="mt-4 max-w-xl text-sm leading-7 text-background/70">
+                One email a week. Unsubscribe any time.
               </p>
             </div>
             <form className="space-y-4" onSubmit={handleSubmit}>
@@ -38,9 +38,9 @@ export function Newsletter({ email, setEmail, onSubmit }: NewsletterProps) {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="Enter your email"
-                className="border-white/15 bg-white/10 text-white placeholder:text-white/45"
+                className="border-background/15 bg-background/10 text-background placeholder:text-background/45"
               />
-              <Button type="submit" size="lg" className="w-full bg-white text-slate-950 hover:bg-white/90">
+              <Button type="submit" size="lg" className="w-full bg-background text-foreground hover:bg-background/90">
                 Join newsletter
                 <ArrowRight className="h-4 w-4" />
               </Button>

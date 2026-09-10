@@ -12,15 +12,15 @@ export function WishlistPage() {
     <>
       <PageHero
         eyebrow="Wishlist"
-        title="Saved pieces for later"
-        description="This page gives the store a dedicated wishlist flow so customers can park favorites before they are ready to buy."
+        title="Your wishlist"
+        description="Pieces you have saved. They stay here until you are ready to buy."
       />
-      <section className="pb-16">
+      <section className="pb-16 pt-8 sm:pb-20">
         <div className="container">
           {wishlistProducts.length === 0 ? (
             <EmptyState
               title="Your wishlist is empty"
-              description="Save products from the catalog or the product details screen and they will show up here."
+              description="Tap the heart on any product to save it here."
               actions={
                 <Button asChild>
                   <Link to="/shop">Explore the shop</Link>

@@ -4,9 +4,18 @@ var config = {
     theme: {
         container: {
             center: true,
-            padding: "1rem",
+            padding: {
+                DEFAULT: "1.25rem",
+                sm: "1.5rem",
+                lg: "2.5rem",
+                xl: "3rem",
+            },
             screens: {
-                "2xl": "1280px",
+                sm: "640px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1280px",
+                "2xl": "1320px",
             },
         },
         extend: {
@@ -28,6 +37,8 @@ var config = {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
+                brand: "hsl(var(--brand))",
+                "brand-foreground": "hsl(var(--brand-foreground))",
             },
             borderRadius: {
                 lg: "var(--radius)",
@@ -36,12 +47,13 @@ var config = {
             },
             fontFamily: {
                 sans: ["Manrope", "ui-sans-serif", "system-ui"],
+                display: ["\"Playfair Display\"", "Georgia", "serif"],
             },
             backgroundImage: {
                 "hero-glow": "linear-gradient(135deg, rgba(16, 112, 89, 0.1), rgba(247, 196, 92, 0.16)), linear-gradient(180deg, rgba(255,255,255,0.72), rgba(246,248,250,0.9))",
             },
             boxShadow: {
-                soft: "0 18px 40px -28px rgba(15, 23, 42, 0.45)",
+                soft: "0 18px 40px -28px rgba(60, 40, 20, 0.35)",
             },
             keyframes: {
                 float: {
